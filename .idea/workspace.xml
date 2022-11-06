@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PositionForBuilding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="classPositionForBulding">
+      <change afterPath="$PROJECT_DIR$/src/Positions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PositionForBuilding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionForBuilding.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667582606521</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="classPositionForBulding">
+      <created>1667657937043</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667657937043</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,6 +99,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hope this works" />
     <MESSAGE value="first branch~" />
-    <option name="LAST_COMMIT_MESSAGE" value="first branch~" />
+    <MESSAGE value="classPositionForBulding" />
+    <option name="LAST_COMMIT_MESSAGE" value="classPositionForBulding" />
   </component>
 </project>
