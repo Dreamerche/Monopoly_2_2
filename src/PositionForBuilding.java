@@ -1,4 +1,7 @@
 public class PositionForBuilding extends Positions {
+static int numberPosition;
+
+
     private int owner;
     private int amountOfHouses;
     private int amountOfHotels;
@@ -28,7 +31,7 @@ public class PositionForBuilding extends Positions {
 
         } else if (amountOfHouses > 4) {
             amountOfHouses = 4;
-            }
+        }
         this.amountOfHouses = amountOfHouses;
     }
 
