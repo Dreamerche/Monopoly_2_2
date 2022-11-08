@@ -58,18 +58,8 @@ public class Main {
         return pWCBBO;
     }//Main
 
-    public static int[][] getPrices() {
-        int[][] prices = {
-                {300, 200, 300},//i made them higher because the game will be really slow for testing otherwise:)
-                {250, 500, 700},
-                {150, 100, 150}
-                //place | house | hotel
-                /*{150, 100, 150},//buy
-                {10,25,35},//rent
-                {75,50,75}//sell*/
-        };
-        return prices;
-    }//PositionForBuilding
+    //public static int[][] getPrices() {
+//PositionForBuilding
 
     public static int checkIfThePositionIsPlaceForBuilding(String playerPosition, int[][] p) {
         int a = -1;
