@@ -1,9 +1,15 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void letsPlayMonopoly() {
+    static int playersCount=0;
+    static List<String> nicknames;
+    public static void main(String[] args) {
+    letsPlayMonopoly();
+}
+    public static void letsPlayMonopoly() {//to add try-catch
         while (true) {
             Scanner scan = new Scanner(System.in);
             System.out.print("Enter the number of players[2;4]: ");
@@ -16,7 +22,7 @@ public class Main {
                 }
             }
             if (checkTheOption) {
-                startTheGame(option);
+                startTheGame();
                 break;
             } else {
                 System.out.println("Your input isn't correct!");
@@ -46,7 +52,7 @@ public class Main {
         System.out.println();
     }//Main
 
-    public static int[][] getPlacesWhereCanBeBuildOn() {
+    public static void setPositionsByDefault(List<Positions> positions) {
         int[] positionsWithPlacesForBuilding = {2, 4, 7, 9, 10, 12, 14, 15, 17, 19, 20, 22, 24, 25, 27, 28, 30, 32, 33, 35, 38, 40};//positions
         int[][] pWCBBO = new int[4][positionsWithPlacesForBuilding.length];
         for (int i = 0; i < positionsWithPlacesForBuilding.length; i++) {
@@ -55,100 +61,22 @@ public class Main {
             pWCBBO[2][i] = 0;//houses on this place
             pWCBBO[3][i] = 0;//hotels on this place
         }
-        return pWCBBO;
     }//Main
 
     //public static int[][] getPrices() {
 //PositionForBuilding
 
-    public static int checkIfThePositionIsPlaceForBuilding(String playerPosition, int[][] p) {
-        int a = -1;
-        for (int i = 0; i < p[0].length; i++) {
-            if (Integer.parseInt(playerPosition) == p[0][i]) {
-                a = i;
-                break;
-            }
-        }
-        return a;
-    }//getOnNewPosition() -да го създам в интерфейс
+    //public static int checkIfThePositionIsPlaceForBuilding(String playerPosition, int[][] p) {
+//getOnNewPosition() -да го създам в интерфейс
 
-    public static boolean askForBuyingThePlace(String n, String[][] pPAM, int position, int[][] prices) {
-        Scanner scan = new Scanner(System.in);
-        boolean check = false;
-        if (Integer.parseInt(pPAM[2][position]) >= prices[0][0])
-            while (true) {
-                System.out.print(n + ", do you want to buy this position, " + pPAM[1][position] + ", for " + prices[0][0] + "? Type \"y\" for yes or \"n\" for no: ");
-                String answer = scan.nextLine();
-                if (answer.equalsIgnoreCase("y")) {
-                    check = true;
-                    break;
-                } else if (answer.equalsIgnoreCase("n")) {
-                    break;
-                } else {
-                    System.out.println("Incorrect input, try again, " + n + ".");
-                }
-            }
-        return check;
-    }
+    //public static boolean askForBuyingThePlace(String n, String[][] pPAM, int position, int[][] prices) {
     //classPositionForBuilding
-    public static boolean askForBuyingAHouse(int[][] pWCBBO, String[][] pPAM, int i, int[][] prices, int a) {
-        Scanner scan = new Scanner(System.in);
-        boolean check = false;
-        if (Integer.parseInt(pPAM[2][i]) >= prices[0][1] && pWCBBO[2][a] < 4) {
-            while (true) {
-                System.out.print(pPAM[0][i] + ", do you want to buy a house on  your current position," +
-                        pPAM[1][i] + ", for " + prices[0][1] + "? Type \"y\" for yes and \"n\" for no: ");
-                String answer = scan.nextLine();
-                if (answer.equalsIgnoreCase("y")) {
-                    check = true;
-                    break;
-                } else if (answer.equalsIgnoreCase("n")) {
-                    break;
-                } else {
-                    System.out.println("Incorrect input, try again, " + pPAM[0][i] + ".");
-                }
-            }
-        }
-        return check;
-    }
+    //public static boolean askForBuyingAHouse(int[][] pWCBBO, String[][] pPAM, int i, int[][] prices, int a)
     //classPositionForBuilding
-    public static boolean askForBuyingAHotel(int[][] pWCBBO, String[][] pPAM, int i, int[][] prices, int a) {
-        Scanner scan = new Scanner(System.in);
-        boolean check = false;
-        if (Integer.parseInt(pPAM[2][i]) >= prices[0][2] && pWCBBO[2][a] == 4 && pWCBBO[3][a] == 0) {
-            while (true) {
-                System.out.print(pPAM[0][i] + ", do you want to buy a hotel on  your current position, " + pPAM[1][i] +
-                        ", for " + prices[0][2] + "? Type \"y\" for yes and \"n\" for no: ");
-                String answer = scan.nextLine();
-                if (answer.equalsIgnoreCase("y")) {
-                    check = true;
-                    break;
-                } else if (answer.equalsIgnoreCase("n")) {
-                    break;
-                } else {
-                    System.out.println("Incorrect input, try again, " + pPAM[0][i] + ".");
-                }
-            }
-        }
-        return check;
-    }
+    //public static boolean askForBuyingAHotel(int[][] pWCBBO, String[][] pPAM, int i, int[][] prices, int a)
     //classPositionForBuilding
-    public static int whatIsPutInThePosition(int[][] pWCBBO, int[][] prices, String[][] pPAM, int a, int i) {
-        int sum = prices[1][0] + pWCBBO[2][a] * prices[1][1] + pWCBBO[3][a] * prices[1][2];
-        return sum;
-    }
+    //public static int whatIsPutInThePosition(int[][] pWCBBO, int[][] prices, String[][] pPAM, int a, int i) {
     //classPositionForBuilding
-    public static boolean checkIfThePositionGivesAChanceOrCommunityChestCard(String position) {
-        boolean check = false;
-        int[] chanceCardPositions = {8, 23, 37, 3, 18, 34};
-        for (int pos : chanceCardPositions) {
-            if (pos == Integer.parseInt(position)) {
-                check = true;
-            }
-        }
-        return check;
-    }
-    // no use
     public static int getRandomFrom0To6() {
         return (int) Math.floor(Math.random() * (7 - 0 + 0) + 0);
     }
@@ -275,10 +203,16 @@ public class Main {
         return pPAM;
     }
     //cardPrison
-    public static void startTheGame(String o) {
-        String[] nicknames = getNicknames(o);//players
-        String[][] pPAM = putNicknamesPlaceThePlayersOnStartAnGiveThemMoney(nicknames);//players
-        int[][] pWCBBO = getPlacesWhereCanBeBuildOn();//ListOfPositions
+    public static void putPlayersAtStart(List<Player> players){
+        for (int i = 0; i < playersCount; i++) {
+            players.add(new Player(nicknames.get(i)));
+        }
+    }
+    public static void startTheGame() {
+        List<Player> players=new ArrayList<Player>();
+        putPlayersAtStart(players);
+        ArrayList<Positions> positions=new ArrayList<Positions>(40);//ListOfPositions
+        setPositionsByDefault(positions);
         int[][] prices = getPrices();//static prices in Position Of Building
         int br = nicknames.length;//saves the number of players who hasn't bankrupted yet
         while (br != 1) {//while we have at least 2 to be playing
@@ -368,11 +302,11 @@ public class Main {
         showTheWinner(pPAM);
     }//Main
 
-    public static String[][] giveMoneyToThePlayer(String[][] pPAM, int i, int[][] pWCBBO, int j, int[][] prices) {
+    /*public static String[][] giveMoneyToThePlayer(String[][] pPAM, int i, int[][] pWCBBO, int j, int[][] prices) {
         int sum = prices[2][0] + (prices[2][1] * pWCBBO[2][j]) + (prices[2][2] * pWCBBO[3][j]);
         pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) + sum);
         return pPAM;
-    }
+    }*/
     //set in property for Building-или метод p
     public static int[] pricesForColumn(int l) {
         int[] pFC = new int[l];
@@ -380,7 +314,7 @@ public class Main {
             pFC[i] = 0;
         }
         return pFC;
-    }//Maun
+    }//Main
 
     public static void showProperty(int i, int[][] pWCBBO, int[][] prices) {
         int[] pFC = pricesForColumn(pWCBBO[0].length);
@@ -648,7 +582,4 @@ public class Main {
         return pAP;
     }//Main
 
-    public static void main(String[] args) {
-        letsPlayMonopoly();
-    }
 }
