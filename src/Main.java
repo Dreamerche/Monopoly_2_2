@@ -22,6 +22,7 @@ public class Main {
                 }
             }
             if (checkTheOption) {
+                playersCount=Integer.parseInt(option);
                 startTheGame();
                 break;
             } else {
@@ -213,6 +214,9 @@ public class Main {
         putPlayersAtStart(players);
         ArrayList<Positions> positions=new ArrayList<Positions>(40);//ListOfPositions
         setPositionsByDefault(positions);
+        for (var p:players) {
+            System.out.println(p);        }
+
         int[][] prices = getPrices();//static prices in Position Of Building
         int br = nicknames.length;//saves the number of players who hasn't bankrupted yet
         while (br != 1) {//while we have at least 2 to be playing
