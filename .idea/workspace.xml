@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="static rents">
-      <change afterPath="$PROJECT_DIR$/src/Askably.java" afterDir="false" />
+    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="askForPayingTheBankAndGetFree">
+      <change afterPath="$PROJECT_DIR$/src/GiveMoneybly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667765400452</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="askForPayingTheBankAndGetFree">
+      <created>1668112580211</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668112580211</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,6 +122,7 @@
     <MESSAGE value="first branch~" />
     <MESSAGE value="classPositionForBulding" />
     <MESSAGE value="add to askForBuyingThePlace, askForBuyingAHouse, askForBuyingAHotel, whatIsPutInThePosition..." />
-    <option name="LAST_COMMIT_MESSAGE" value="add to askForBuyingThePlace, askForBuyingAHouse, askForBuyingAHotel, whatIsPutInThePosition..." />
+    <MESSAGE value="askForPayingTheBankAndGetFree" />
+    <option name="LAST_COMMIT_MESSAGE" value="askForPayingTheBankAndGetFree" />
   </component>
 </project>
