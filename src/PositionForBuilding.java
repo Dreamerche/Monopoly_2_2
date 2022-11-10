@@ -1,6 +1,8 @@
 import java.util.Scanner;
 public class PositionForBuilding extends Positions {
-    static int numberPosition;
+    static int rentLand=200;
+    static int rentHouses=100;
+    static int rentHotels=50;
 
 
     public int owner;
