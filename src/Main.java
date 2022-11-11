@@ -213,93 +213,23 @@ public class Main {
         putPlayersAtStart(players);
         ArrayList<Positions> positions=new ArrayList<Positions>(40);//ListOfPositions
         setPositionsByDefault(positions);
-        int[][] prices = getPrices();//static prices in Position Of Building
-        int br = nicknames.length;//saves the number of players who hasn't bankrupted yet
+        //int[][] prices = getPrices();//static prices in Position Of Building
+        int br = playersCount;//saves the number of players who hasn't bankrupted yet
         while (br != 1) {//while we have at least 2 to be playing
-            for (int i = 0; i < nicknames.length; i++) {
-                if (Integer.parseInt(pPAM[2][i]) > -1 && br != 1) {//if the player hasn't bankrupted or isn't the only one left
-                    int br2 = 0;//check if in prison
-                    if (Integer.parseInt(pPAM[1][i]) == 11) {
-                        throwTheDices(nicknames[i]);
-                        pPAM = throwTheDicesToGetOutOfJail(pPAM, i);
-                        if (pPAM[1][i].equalsIgnoreCase("12")) {
-                            pPAM[1][i] = Integer.toString(11);
-                        } else {
-                            br2 = 1;
-                        }
+            for (int i = 0; i < playersCount; i++) {
+                if (!players.get(i).isHasBankrupted() && br != 1) {//if the player hasn't bankrupted or isn't the only one left
+                    if (players.get(i).isBeingInJail()) {
+                        tryToGetOutOfJail(players,i,positions);//PositionsForJail
                     }
-                    if (br2 == 0) {
-                        pPAM = letThePlayerPlay(nicknames, i, pPAM);//throw dices and move to the new position
-                        if (pPAM[1][i].equalsIgnoreCase("11") || pPAM[1][i].equalsIgnoreCase("31")) {
-                            System.out.println(pPAM[0][i] + " goes to jail! ");
-                            int a = Integer.parseInt(pPAM[2][i]);
-                            int b = Integer.parseInt(pPAM[1][i]);
-                            pPAM = askForPayingTheBankAndGetFree(pPAM, i);
-                            if (Integer.parseInt(pPAM[2][i]) != a) {
-                                if (b == 11) {
-                                    pPAM[1][i] = "13";
-                                    System.out.println("Now you're on position 13.");
-                                } else {
-                                    System.out.println("You stay on position 31.");
-                                    pPAM[1][i] = "31";
-                                }
-                            }
-                        }
-                    }
-                    int a = checkIfThePositionIsPlaceForBuilding(pPAM[1][i], pWCBBO);//saves the index of the column
-                    if (a >= 0)//check if the place can have buildings on it
-                    {
-                        if (pWCBBO[1][a] == i)//check if we have the place
-                        {
-                            boolean f = askForBuyingAHotel(pWCBBO, pPAM, i, prices, a);
-                            if (f) {
-                                pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) - prices[0][2]);
-                                pWCBBO[3][a]++;
-                            }
-                            boolean c = askForBuyingAHouse(pWCBBO, pPAM, i, prices, a);
-                            if (c) {
-                                pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) - prices[0][1]);
-                                pWCBBO[2][a]++;
-                            }
-                        } else if (pWCBBO[1][a] > -1) {//pay rent
-                            System.out.println("\n" + pPAM[0][i] + " gives a rent of " + whatIsPutInThePosition(pWCBBO, prices, pPAM, a, i) + "  to " + pPAM[0][pWCBBO[1][a]] + ".\n");
-                            pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) - whatIsPutInThePosition(pWCBBO, prices, pPAM, a, i));
-                            pPAM[2][pWCBBO[1][a]] = Integer.toString(Integer.parseInt(pPAM[2][pWCBBO[1][a]]) + whatIsPutInThePosition(pWCBBO, prices, pPAM, a, i));
-                        } else {
-                            boolean b = askForBuyingThePlace(nicknames[i], pPAM, i, prices);
-                            if (b)//check if buying the place
-                            {
-                                pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) - prices[0][0]);
-                                pWCBBO[1][a] = i;
-                            }
-                        }
-                    }
-                    boolean b = checkIfThePositionGivesAChanceOrCommunityChestCard(pPAM[1][i]);
-                    if (b) {
-                        pPAM = getAChanceCardOrCommunityChestCard(pPAM, i);
-                    }
-                    if (Integer.parseInt(pPAM[2][i]) < 0) {//check if the player has money and if they're in dept
-                        pWCBBO = giveAllThePropertyToTheBank(i, pWCBBO);
-                        System.out.println(pPAM[0][i] + ", you bankrupted and lost your property.\n");
-                        br--;
-                    }
-                    /*String[] chosenPropertyToSell=aksIfSellingProperty(nicknames[i], i, pWCBBO,prices);
-                    for (int j = 0; j < pWCBBO[0].length; j++) {
-                        for (int k = 0; k < chosenPropertyToSell.length; k++) {
-                            if(chosenPropertyToSell[k]!=null) {
-                                if (chosenPropertyToSell[k].equalsIgnoreCase(Integer.toString(pWCBBO[0][j]))) {
-                                    pPAM = giveMoneyToThePlayer(pPAM, i, pWCBBO, j, prices);
-                                    pWCBBO[1][j] = -1;
-                                }
-                            }
-                        }
-                    }*/
-                    showThePlayersPositionAndMoney(pPAM);
-                    showAllThePropertiesPfThePlayers(pPAM, pWCBBO);
+                    if(!players.get(i).isBeingInJail())
+                    setTheNewPosition(players.get(i));
+                    seeWhatTheNewPositionOffersOrTakes(players,i,positions);
+                    showThePlayersPositionAndMoney(players);
+                    showAllThePropertiesPfThePlayers(players,positions);
                 }
             }
         }
-        showTheWinner(pPAM);
+        showTheWinner(players);
     }//Main
 
     /*public static String[][] giveMoneyToThePlayer(String[][] pPAM, int i, int[][] pWCBBO, int j, int[][] prices) {
@@ -423,10 +353,10 @@ public class Main {
         System.out.println();
         return array;
     }*/
-    public static void showTheWinner(String[][] pPAM) {
-        for (int i = 0; i < pPAM[0].length; i++) {
-            if (Integer.parseInt(pPAM[2][i]) > 0) {
-                System.out.println("The winner is " + pPAM[0][i] + ".");
+    public static void showTheWinner(List<Player> players) {
+        for (int i = 0; i < playersCount; i++) {
+            if (!players.get(i).isHasBankrupted()) {
+                System.out.println("The winner is " + players.get(i).getName() + "!");
             }
         }
     }//Main
