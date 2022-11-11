@@ -1,5 +1,8 @@
 import java.util.Scanner;
 public class PositionForBuilding extends Positions {
+    static int buyLand=300;
+    static int buyHouses=200;
+    static int buyHotels=100;
     static int rentLand=200;
     static int rentHouses=100;
     static int rentHotels=50;
@@ -54,24 +57,10 @@ public class PositionForBuilding extends Positions {
                 ", amountOfHotels=" + amountOfHotels +
                 '}';
     }
-
-    public static int[][] getPrices() {
-        int price;
-        int[] [] prices = {
-                {300, 200, 300},//i made them higher because the game will be really slow for testing otherwise:)
-                {250, 500, 700},
-                {150, 100, 150}
-                //place | house | hotel
-                /*{150, 100, 150},//buy
-                {10,25,35},//rent
-                {75,50,75}//sell*/
-        };
-        return prices;
-    }
-    public static boolean askForBuyingThePlace(String n, String[][] pPAM, int position, int[][] prices) {
+    public static boolean askForBuyingThePlace(List<Player> players,i) {
         Scanner scan = new Scanner(System.in);
         boolean check = false;
-        if (Integer.parseInt(pPAM[2][position]) >= prices[0][0])
+        if (Integer.parseInt(players.get(i).getCash() >= buyLand)
             while (true) {
                 System.out.print(n + ", do you want to buy this position, " + pPAM[1][position] + ", for " + prices[0][0] + "? Type \"y\" for yes or \"n\" for no: ");
                 String answer = scan.nextLine();
