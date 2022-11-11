@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     static int playersCount=0;
@@ -210,17 +207,18 @@ public class Main {
         }
     }
     public static void startTheGame() {
-        List<Player> players=new ArrayList<Player>();
+        List<Player> players = null;
+
         putPlayersAtStart(players);
         ArrayList<Positions> positions=new ArrayList<Positions>(40);//ListOfPositions
         setPositionsByDefault(positions);
+        System.out.println("Check players");
         for (var p:players) {
             System.out.println(p);        }
-
-        int[][] prices = getPrices();//static prices in Position Of Building
-        int br = nicknames.length;//saves the number of players who hasn't bankrupted yet
+        //int[][] prices = getPrices();//static prices in Position Of Building
+        int br = playersCount;//saves the number of players who hasn't bankrupted yet
         while (br != 1) {//while we have at least 2 to be playing
-            for (int i = 0; i < nicknames.length; i++) {
+            for (int i = 0; i < playersCount; i++) {
                 if (Integer.parseInt(pPAM[2][i]) > -1 && br != 1) {//if the player hasn't bankrupted or isn't the only one left
                     int br2 = 0;//check if in prison
                     if (Integer.parseInt(pPAM[1][i]) == 11) {

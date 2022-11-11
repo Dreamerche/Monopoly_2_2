@@ -3,6 +3,7 @@ public class Player {
     private double cash;
     private int currentPosition;
     private boolean beingInJail;
+    private boolean hasBankrupted;
 
     @Override
     public String toString() {
@@ -11,6 +12,7 @@ public class Player {
                 ", cash=" + cash +
                 ", currentPosition=" + currentPosition +
                 ", beingInJail=" + beingInJail +
+                ", hasBankrupted=" + hasBankrupted +
                 '}';
     }
 
@@ -19,6 +21,7 @@ public class Player {
         this.cash = 1500;
         this.currentPosition = 1;
         this.beingInJail = false;
+        this.hasBankrupted=false;
     }
 
     public String getName() {
@@ -51,5 +54,13 @@ public class Player {
 
     public void setBeingInJail(boolean beingInJail) {
         this.beingInJail = beingInJail;
+    }
+
+    public boolean isHasBankrupted() {
+        return hasBankrupted;
+    }
+
+    public void setHasBankrupted(boolean hasBankrupted) {
+        this.hasBankrupted = hasBankrupted;
     }
 }
