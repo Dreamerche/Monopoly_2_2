@@ -1,0 +1,175 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e4081136-2a42-4e06-a3f6-e468a0f18c33\" name=\"Changes\" comment=\"classPositionCommunityChastCard\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/PositionChanceCard.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"AddingCommunityChestCardPosition\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2H5cuTAGDpa3EWCcD91DhibOM2R\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/nikiv/IdeaProjects/MONOPOLY\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e4081136-2a42-4e06-a3f6-e468a0f18c33\" name=\"Changes\" comment=\"\" />\r\n      <created>1667578609133</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1667578609133</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"hope this works\">\r\n      <created>1667582346274</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667582346274</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"hope this works\">\r\n      <created>1667582392489</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667582392489</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"first branch~\">\r\n      <created>1667582606521</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667582606521</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"classPositionForBulding\">\r\n      <created>1667657937043</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667657937043</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"classPositionForBuilding-newConstructor,Getterts, Setters.\">\r\n      <created>1667746223479</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667746223479</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"classPositionCommunityChastCard\">\r\n      <created>1667746957956</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667746957956</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"hope this works\" />\r\n    <MESSAGE value=\"first branch~\" />\r\n    <MESSAGE value=\"classPositionForBulding\" />\r\n    <MESSAGE value=\"classPositionForBuilding-newConstructor,Getterts, Setters.\" />\r\n    <MESSAGE value=\"classPositionCommunityChastCard\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"classPositionCommunityChastCard\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,8 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="classPositionCommunityChastCard">
+-      <change afterPath="$PROJECT_DIR$/src/PositionChanceCard.java" afterDir="false" />
++    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="add to interface Positionably">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/PositionChanceCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionChanceCard.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/PositionCommunityChestCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionCommunityChestCard.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -16,17 +18,25 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="Class" />
++        <option value="Interface" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="AddingCommunityChestCardPosition" />
++        <entry key="$PROJECT_DIR$" value="AddingInterfaceP" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="HighlightingSettingsPerFile">
++    <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/Main.java" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/Person.java" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/PositionForBuilding.java" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/Positions.java" root0="FORCE_HIGHLIGHTING" />
++  </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+@@ -36,13 +46,13 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "last_opened_file_path": "C:/Users/nikiv/IdeaProjects/MONOPOLY"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/nikiv/IdeaProjects/MONOPOLY&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -80,19 +90,19 @@
+       <option name="project" value="LOCAL" />
+       <updated>1667657937043</updated>
+     </task>
+-    <task id="LOCAL-00005" summary="classPositionForBuilding-newConstructor,Getterts, Setters.">
+-      <created>1667746223479</created>
++    <task id="LOCAL-00005" summary="add to askForBuyingThePlace, askForBuyingAHouse, askForBuyingAHotel, whatIsPutInThePosition...">
++      <created>1667765400452</created>
+       <option name="number" value="00005" />
+       <option name="presentableId" value="LOCAL-00005" />
+       <option name="project" value="LOCAL" />
+-      <updated>1667746223479</updated>
++      <updated>1667765400452</updated>
+     </task>
+-    <task id="LOCAL-00006" summary="classPositionCommunityChastCard">
+-      <created>1667746957956</created>
++    <task id="LOCAL-00006" summary="add to interface Positionably">
++      <created>1667766824315</created>
+       <option name="number" value="00006" />
+       <option name="presentableId" value="LOCAL-00006" />
+       <option name="project" value="LOCAL" />
+-      <updated>1667746957956</updated>
++      <updated>1667766824316</updated>
+     </task>
+     <option name="localTasksCounter" value="7" />
+     <servers />
+@@ -112,8 +122,8 @@
+     <MESSAGE value="hope this works" />
+     <MESSAGE value="first branch~" />
+     <MESSAGE value="classPositionForBulding" />
+-    <MESSAGE value="classPositionForBuilding-newConstructor,Getterts, Setters." />
+-    <MESSAGE value="classPositionCommunityChastCard" />
+-    <option name="LAST_COMMIT_MESSAGE" value="classPositionCommunityChastCard" />
++    <MESSAGE value="add to askForBuyingThePlace, askForBuyingAHouse, askForBuyingAHotel, whatIsPutInThePosition..." />
++    <MESSAGE value="add to interface Positionably" />
++    <option name="LAST_COMMIT_MESSAGE" value="add to interface Positionably" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/PositionChanceCard.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class PositionChanceCard extends Positions{\r\n\r\n    public PositionChanceCard(int numberPosition) {\r\n        super(numberPosition);\r\n    }\r\n    @Override\r\n    public String toString() {\r\n        return \"PositionChanceCard{\" +\r\n                \"numberPosition=\" + numberPosition +\r\n                '}';\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/PositionChanceCard.java b/src/PositionChanceCard.java
+--- a/src/PositionChanceCard.java	
++++ b/src/PositionChanceCard.java	
+@@ -9,4 +9,26 @@
+                 "numberPosition=" + numberPosition +
+                 '}';
+     }
++    public static int getRandomFrom0To6() {
++        return (int) Math.floor(Math.random() * (7 - 0 + 0) + 0);
++    }
++    public static String[][] seeTheChanceCard(String[][] pPAM, int i) {
++        int number = getRandomFrom0To6();
++        System.out.print(pPAM[0][i] + ", your chance card ");
++        if (number <= 3) {
++            int sum = (number + 1) * 50;
++            System.out.println("gives you " + sum + " money!");
++            pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) + sum);
++        } else if (number <= 5) {
++            int sum = 100;
++            System.out.println("gets from you " + sum + " money and gives them to the bank!");
++            pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) - sum);
++        } else {
++            System.out.print("puts you in prison! ");
++            pPAM = askForPayingTheBankAndGetFree(pPAM, i);
++        }
++        return pPAM;
++    }
++
++
+ }
+Index: src/PositionCommunityChestCard.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class PositionCommunityChestCard extends Positions {\r\n\r\n    public PositionCommunityChestCard(int numberPosition) {\r\n        super(numberPosition);\r\n    }\r\n    @Override\r\n    public String toString() {\r\n        return \"PositionCommunityChestCart{\" +\r\n                \"numberPosition=\" + numberPosition +\r\n                '}';\r\n    }\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/PositionCommunityChestCard.java b/src/PositionCommunityChestCard.java
+--- a/src/PositionCommunityChestCard.java	
++++ b/src/PositionCommunityChestCard.java	
+@@ -9,5 +9,22 @@
+                 "numberPosition=" + numberPosition +
+                 '}';
+     }
++    public static String[][] seeTheCommunityChestCard(String[][] pPAM, int i) {
++        int number = getRandomFrom0To6();
++        System.out.print(pPAM[0][i] + ", your community chest card ");
++        if (number <= 2) {
++            int sum = (number + 1) * 50;
++            System.out.println("gives you " + sum + " money!");
++            pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) + sum);
++        } else if (number <= 5) {
++            int sum = 100;
++            System.out.println("gets from you " + sum + " money and gives them to the bank!");
++            pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) - sum);
++        } else {
++            System.out.print("puts you in prison!");
++            pPAM = askForPayingTheBankAndGetFree(pPAM, i);
++        }
++        return pPAM;
++    }
+ 
+ }
