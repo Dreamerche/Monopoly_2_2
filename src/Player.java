@@ -22,6 +22,7 @@ public class Player {
         this.currentPosition = 1;
         this.beingInJail = false;
         this.hasBankrupted = false;
+        this.hasBankrupted=false;
     }
 
     public String getName() {
