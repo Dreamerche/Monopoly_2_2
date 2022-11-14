@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="classPositionCommunityChastCard">
-      <change afterPath="$PROJECT_DIR$/src/PositionChanceCard.java" afterDir="false" />
+    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="askForPayingTheBankAndGetFree">
+      <change afterPath="$PROJECT_DIR$/src/GiveMoneybly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,16 +17,24 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="AddingCommunityChestCardPosition" />
+        <entry key="$PROJECT_DIR$" value="classPositionForBuildings" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Main.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Person.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/PositionForBuilding.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Positions.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -36,13 +45,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/nikiv/IdeaProjects/MONOPOLY"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nikiv/IdeaProjects/MONOPOLY&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -80,19 +89,19 @@
       <option name="project" value="LOCAL" />
       <updated>1667657937043</updated>
     </task>
-    <task id="LOCAL-00005" summary="classPositionForBuilding-newConstructor,Getterts, Setters.">
-      <created>1667746223479</created>
+    <task id="LOCAL-00005" summary="add to askForBuyingThePlace, askForBuyingAHouse, askForBuyingAHotel, whatIsPutInThePosition...">
+      <created>1667765400452</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1667746223479</updated>
+      <updated>1667765400452</updated>
     </task>
-    <task id="LOCAL-00006" summary="classPositionCommunityChastCard">
-      <created>1667746957956</created>
+    <task id="LOCAL-00006" summary="askForPayingTheBankAndGetFree">
+      <created>1668112580211</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1667746957956</updated>
+      <updated>1668112580211</updated>
     </task>
     <option name="localTasksCounter" value="7" />
     <servers />
@@ -112,8 +121,8 @@
     <MESSAGE value="hope this works" />
     <MESSAGE value="first branch~" />
     <MESSAGE value="classPositionForBulding" />
-    <MESSAGE value="classPositionForBuilding-newConstructor,Getterts, Setters." />
-    <MESSAGE value="classPositionCommunityChastCard" />
-    <option name="LAST_COMMIT_MESSAGE" value="classPositionCommunityChastCard" />
+    <MESSAGE value="add to askForBuyingThePlace, askForBuyingAHouse, askForBuyingAHotel, whatIsPutInThePosition..." />
+    <MESSAGE value="askForPayingTheBankAndGetFree" />
+    <option name="LAST_COMMIT_MESSAGE" value="askForPayingTheBankAndGetFree" />
   </component>
 </project>
