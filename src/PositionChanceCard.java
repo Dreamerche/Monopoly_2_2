@@ -57,17 +57,7 @@ public class PositionChanceCard extends Positions {
         return pPAM;
     }
 
-    public static String[][] throwTheDicesToGetOutOfJail(String[][] pPAM, int i) {
-        int firstNum = (int) Math.floor(Math.random() * (6 - 1 + 1) + 1);
-        int secondNum = (int) Math.floor(Math.random() * (6 - 1 + 1) + 1);
-        if (firstNum == secondNum) {
-            System.out.println("Lucky you! You got " + firstNum + "-" + secondNum + " from the dices and you're free!\n" +
-                    "Now throw the dices to get to your new position!");
-            pPAM[1][i] = Integer.toString(12);
-        } else {
-            System.out.println("You got " + firstNum + "-" + secondNum + " from the dices and you aren't free!");
-        }
-        return pPAM;
+
     }
 
-}
+

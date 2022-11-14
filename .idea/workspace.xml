@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="metods-getRandom" />
+    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Askably.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Askablе.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GiveMoneybly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GiveMoneyblе.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PositionChanceCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionChanceCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PositionPrison.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionPrison.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Positionably.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Positionablе.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,12 +26,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="AddingChanceCard" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Main.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/PositionForBuilding.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Positions.java" root0="FORCE_HIGHLIGHTING" />
@@ -39,13 +46,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nikiv/IdeaProjects/MonopolyMarty&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Git.Branch.Popup.ShowAllRemotes": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/nikiv/IdeaProjects/MonopolyMarty"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
