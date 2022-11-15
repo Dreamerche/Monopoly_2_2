@@ -81,27 +81,29 @@ public class Main {
         return (int) Math.floor(Math.random() * (7 - 0 + 0) + 0);
     }
     //cardsPosition
-    public static String[][] askForPayingTheBankAndGetFree(String[][] pPAM, int i) {
-        Scanner scan = new Scanner(System.in);
-        if (Integer.parseInt(pPAM[2][i]) >= 50)//check if the player has 50 money
-        {
-            while (true) {
-                System.out.print("Do you want to pay the bank 50 money and not get in jail?\n" +
-                        "Type \"y\" for yes or \"n\" for no:");
-                String option = scan.nextLine();
-                if (option.equalsIgnoreCase("y")) {
-                    pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) - 50);
-                    break;
-                } else if (option.equalsIgnoreCase("n")) {
-                    System.out.println(pPAM[0][i] + " goes to jail.");
-                    pPAM[1][i] = Integer.toString(11);
-                    break;
-                } else {
-                    System.out.println("Incorrect input, try again, " + pPAM[0][i] + ".");
+    public void askForPayingTheBankAndGetFree(List<Player>players, int i) {
+
+            Scanner scan = new Scanner(System.in);
+            if (players.get(i).getCash() >= 50.0)//check if the player has 50 money
+            {
+                while (true) {
+                    System.out.print("Do you want to pay the bank 50 money and not get in jail?\n" +
+                            "Type \"y\" for yes or \"n\" for no:");
+                    String option = scan.nextLine();
+                    if (option.equalsIgnoreCase("y")) {
+                        players.get(i).setCash(players.get(i).getCash() - 50);
+                        break;
+                    } else if (option.equalsIgnoreCase("n")) {
+                        System.out.println(players.get(i).getName() + " goes to jail.");
+                        players.get(i).setCurrentPosition(11);
+                        players.get(i).setBeingInJail(true);
+                        break;
+                    } else {
+                        System.out.println("Incorrect input, try again, " + players.get(i).getName() + ".");
+                    }
                 }
             }
         }
-        return pPAM;
     }
     //Newinterface -implements Prison, card+
     public static String[][] seeTheChanceCard(String[][] pPAM, int i) {

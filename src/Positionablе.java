@@ -1,4 +1,4 @@
-public interface Positionably {
+public interface Positionablе {
     public void getOnNewPosition();
 
     static int getOnNewPosition(String playerPosition, int[][] p) {
