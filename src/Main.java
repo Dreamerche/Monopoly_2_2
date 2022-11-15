@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     static int playersCount=0;
-    static List<String> nicknames;
+    static List<String> nicknames=new ArrayList<>();
     public static void main(String[] args) {
     letsPlayMonopoly();
 }
@@ -22,6 +22,7 @@ public class Main {
                 }
             }
             if (checkTheOption) {
+                playersCount=Integer.valueOf(option);
                 startTheGame();
                 break;
             } else {
@@ -40,14 +41,10 @@ public class Main {
         return a;
     }//Main
 
-    public static void showThePlayersPositionAndMoney(String[][] pPAM) {
+    public static void showThePlayersPositionAndMoney(List<Player> players) {
         System.out.println("Player | Position | Money");
-        for (int i = 0; i < pPAM[0].length; i++) {
-            System.out.print("| ");
-            for (int j = 0; j < pPAM.length; j++) {
-                System.out.print(pPAM[j][i] + " | ");
-            }
-            System.out.println();
+        for (int i = 0; i < playersCount; i++) {
+            System.out.println(players.get(i).getName()+" | "+players.get(i).getCurrentPosition()+" | "+players.get(i).getCash());
         }
         System.out.println();
     }//Main
@@ -83,59 +80,10 @@ public class Main {
     //cardsPosition
     //public void askForPayingTheBankAndGetFree(List<Player>players, int i) {
     //Newinterface -implements Prison, card+
-    public static String[][] seeTheChanceCard(String[][] pPAM, int i) {
-        int number = getRandomFrom0To6();
-        System.out.print(pPAM[0][i] + ", your chance card ");
-        if (number <= 3) {
-            int sum = (number + 1) * 50;
-            System.out.println("gives you " + sum + " money!");
-            pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) + sum);
-        } else if (number <= 5) {
-            int sum = 100;
-            System.out.println("gets from you " + sum + " money and gives them to the bank!");
-            pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) - sum);
-        } else {
-            System.out.print("puts you in prison! ");
-            //pPAM = askForPayingTheBankAndGetFree(pPAM, i);
-        }
-        return pPAM;
-    }
+    //public static String[][] seeTheChanceCard(String[][] pPAM, int i) {
     //chanceCard
-    public static String[][] seeTheCommunityChestCard(String[][] pPAM, int i) {
-        int number = getRandomFrom0To6();
-        System.out.print(pPAM[0][i] + ", your community chest card ");
-        if (number <= 2) {
-            int sum = (number + 1) * 50;
-            System.out.println("gives you " + sum + " money!");
-            pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) + sum);
-        } else if (number <= 5) {
-            int sum = 100;
-            System.out.println("gets from you " + sum + " money and gives them to the bank!");
-            pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) - sum);
-        } else {
-            System.out.print("puts you in prison!");
-            //pPAM = askForPayingTheBankAndGetFree(pPAM, i);
-        }
-        return pPAM;
-    }
+    //public static String[][] seeTheCommunityChestCard(String[][] pPAM, int i) {
     //CommunityChestCard
-    public static String[][] getAChanceCardOrCommunityChestCard(String[][] pPAM, int i) {
-        int[] chancePositions = {8, 23, 37};//0-3: receive 50,100,150,200 money, 4-5: give 100 to the bank, 6:go to jail
-        int[] communityPositions = {3, 18, 34};//0-2: receive 50,100,150 money, 3-5: give 100 money, 6: go to jail
-        for (int pos : chancePositions) {
-            if (Integer.parseInt(pPAM[1][i]) == pos) {
-                pPAM = seeTheChanceCard(pPAM, i);
-            }
-        }
-        for (int pos : communityPositions) {
-            if (Integer.parseInt(pPAM[1][i]) == pos) {
-                pPAM = seeTheCommunityChestCard(pPAM, i);
-            }
-        }
-        System.out.println();
-        return pPAM;
-    }
-    //Main
     public static void showAllThePropertiesPfThePlayers(String[][] pPAM, int[][] pWCBBO) {
         for (int i = 0; i < pPAM[0].length; i++) {
             int sum = 0;
@@ -172,6 +120,7 @@ public class Main {
     //public static String[][] throwTheDicesToGetOutOfJail(List<Player> pPAM, int i) {
     //cardPrison
     public static void putPlayersAtStart(List<Player> players){
+        letsPickNicknames();
         for (int i = 0; i < playersCount; i++) {
             players.add(new Player(nicknames.get(i)));
         }
@@ -190,10 +139,10 @@ public class Main {
                         positions.get(players.get(i).getCurrentPosition()-1).seeWhatThePositionOffersOrTakes(players,i,positions);//PositionsForJail
                     }
                     if(!players.get(i).isBeingInJail())
-                    setTheNewPosition(players.get(i));
+                    players.get(i).setTheNewPosition(players,i);
                     positions.get(players.get(i).getCurrentPosition()-1).seeWhatThePositionOffersOrTakes(players,i,positions);
                     showThePlayersPositionAndMoney(players);
-                    showAllThePropertiesPfThePlayers(players,positions);
+                    //showAllThePropertiesPfThePlayers(players,positions);
                 }
             }
         }
@@ -340,7 +289,7 @@ public class Main {
         return pWCBBO;
     }//Main and Person
 
-    public static String[] getNicknames(String o) {
+    /*public static String[] getNicknames(String o) {
         String[] nicknames = letsPickNicknames(Integer.parseInt(o));
         String[] finalNicknames = letsThrowDicesBeforeTheActualGame(nicknames);
         System.out.println("This is the order of the players:");
@@ -349,19 +298,18 @@ public class Main {
         }
         return finalNicknames;
     }//Main
-
+*/
     //I was enthusiastic, so I let the "lets" part remain in the next two methods' names
-    public static String[] letsPickNicknames(int countOfPlayers) {
+    public static void letsPickNicknames() {
         Scanner scan = new Scanner(System.in);
-        String[] nicknames = new String[countOfPlayers];
-        for (int i = 0; i < countOfPlayers; i++) {
+        for (int i = 0; i < playersCount; i++) {
             System.out.print("Enter a nickname: ");
-            nicknames[i] = scan.nextLine();
+            String newNickname=scan.nextLine();
+            nicknames.add(newNickname);
         }
-        return nicknames;
     }//Main
 
-    public static String[] letsThrowDicesBeforeTheActualGame(String[] n) {
+    /*public static String[] letsThrowDicesBeforeTheActualGame(String[] n) {
         Scanner scan = new Scanner(System.in);
         String[] finalNicknames = new String[n.length];
         int[][] sortedScore = new int[2][n.length];//[score][index of nickname]
@@ -441,43 +389,5 @@ public class Main {
         }
         return finalNicknames;
     }//Main
-
-    public static void throwTheDices(String n) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print(n + ", throw the dices by typing \"t\": ");
-        while (true) {
-            String typed = scan.nextLine();
-            if (typed.equalsIgnoreCase("t")) {
-                break;
-            }
-        }
-    }//Main
-
-    public static int getResultFromDices() {
-        int sum = 0;
-        sum += Math.floor(Math.random() * (6 - 1 + 1) + 1);
-        sum += Math.floor(Math.random() * (6 - 1 + 1) + 1);
-        return sum;
-    }//Main
-
-    public static String[][] letThePlayerPlay(String[] n, int i, String[][] pAP) {
-        throwTheDices(n[i]);
-        int score = getResultFromDices();
-        System.out.println(n[i] + " got score " + score + ".");
-        for (int j = 0; j < n.length; j++) {
-            if (pAP[0][j] == n[i]) {
-                int newPosition = Integer.parseInt(pAP[1][j]) + score;
-                if (newPosition > 40) {
-                    newPosition = newPosition - 40;
-                    pAP[2][j] = Integer.toString(Integer.parseInt(pAP[2][j]) + 200);
-                    System.out.print(pAP[0][j] + " gains 200 money. ");
-
-                }
-                pAP[1][j] = Integer.toString(newPosition);
-                System.out.println("Now " + pAP[0][j] + " is on position " + newPosition + ".\n");
-            }
-        }
-        return pAP;
-    }//Main
-
+*/
 }

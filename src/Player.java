@@ -1,4 +1,7 @@
-public class Player {
+import java.util.List;
+import java.util.Scanner;
+
+public class Player implements MoveOnBoardable {
     private String name;
     private double cash;
     private int currentPosition;
@@ -21,7 +24,7 @@ public class Player {
         this.cash = 1500;
         this.currentPosition = 1;
         this.beingInJail = false;
-        this.hasBankrupted=false;
+        this.hasBankrupted = false;
     }
 
     public String getName() {
@@ -37,8 +40,8 @@ public class Player {
     }
 
     public void setCash(double cash) {
-        if(cash<0){
-            System.out.println(getName()+" has bankrupted.");
+        if (cash < 0) {
+            System.out.println(getName() + " has bankrupted.");
             setHasBankrupted(true);
         }
         this.cash = cash;
@@ -64,6 +67,41 @@ public class Player {
         return hasBankrupted;
     }
 
-    public void setHasBankrupted(boolean hasBankrupted) {this.hasBankrupted = hasBankrupted;
+    public void setHasBankrupted(boolean hasBankrupted) {
+        this.hasBankrupted = hasBankrupted;
     }
+
+    @Override
+    public void setTheNewPosition(List<Player> players, int i) {
+        throwTheDices();
+        int score = getResultFromDices();
+        System.out.println(getName() + " got score " + score + ".");
+        setCurrentPosition(getCurrentPosition() + score);
+        if (getCurrentPosition() > 40) {
+            setCurrentPosition(getCurrentPosition() - 40);
+            setCash(getCash() + 200);
+            System.out.print(getName()+ " gains 200 money. ");
+
+        }
+        System.out.println("Now " + getName() + " is on position " + getCurrentPosition() + ".\n");
+    }
+
+    private void throwTheDices() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print(getName() + ", throw the dices by typing \"t\": ");
+        while (true) {
+            String typed = scan.nextLine();
+            if (typed.equalsIgnoreCase("t")) {
+                break;
+            }
+        }
+    }
+
+    private int getResultFromDices() {
+        int sum = 0;
+        sum += Math.floor(Math.random() * (6 - 1 + 1) + 1);
+        sum += Math.floor(Math.random() * (6 - 1 + 1) + 1);
+        return sum;
+    }
+
 }
