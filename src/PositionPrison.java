@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Scanner;
 
-public class PositionPrison extends Positions implements Askablе {
+public class PositionPrison extends Position implements Askablе, OutOfJailable {
 
     public PositionPrison(int numberPosition) {
         super(numberPosition);
@@ -13,7 +13,11 @@ public class PositionPrison extends Positions implements Askablе {
                 "numberPosition=" + numberPosition +
                 '}';
     }
-
+    @Override
+    public void seeWhatThePositionOffersOrTakes(List<Player>players,int i,List<Position>positions){
+        throwTheDicesToGetOutOfJail(players,i);
+    }
+    @Override
     public void throwTheDicesToGetOutOfJail(List<Player> players, int i) {
         int firstNum = (int) Math.floor(Math.random() * (6 - 1 + 1) + 1);
         int secondNum = (int) Math.floor(Math.random() * (6 - 1 + 1) + 1);

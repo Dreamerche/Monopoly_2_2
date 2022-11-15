@@ -52,7 +52,7 @@ public class Main {
         System.out.println();
     }//Main
 
-    public static void setPositionsByDefault(List<Positions> positions) {
+    public static void setPositionsByDefault(List<Position> positions) {
         int[] positionsWithPlacesForBuilding = {2, 4, 7, 9, 10, 12, 14, 15, 17, 19, 20, 22, 24, 25, 27, 28, 30, 32, 33, 35, 38, 40};//positions
         int[][] pWCBBO = new int[4][positionsWithPlacesForBuilding.length];
         for (int i = 0; i < positionsWithPlacesForBuilding.length; i++) {
@@ -81,30 +81,7 @@ public class Main {
         return (int) Math.floor(Math.random() * (7 - 0 + 0) + 0);
     }
     //cardsPosition
-    public void askForPayingTheBankAndGetFree(List<Player>players, int i) {
-
-            Scanner scan = new Scanner(System.in);
-            if (players.get(i).getCash() >= 50.0)//check if the player has 50 money
-            {
-                while (true) {
-                    System.out.print("Do you want to pay the bank 50 money and not get in jail?\n" +
-                            "Type \"y\" for yes or \"n\" for no:");
-                    String option = scan.nextLine();
-                    if (option.equalsIgnoreCase("y")) {
-                        players.get(i).setCash(players.get(i).getCash() - 50);
-                        break;
-                    } else if (option.equalsIgnoreCase("n")) {
-                        System.out.println(players.get(i).getName() + " goes to jail.");
-                        players.get(i).setCurrentPosition(11);
-                        players.get(i).setBeingInJail(true);
-                        break;
-                    } else {
-                        System.out.println("Incorrect input, try again, " + players.get(i).getName() + ".");
-                    }
-                }
-            }
-        }
-    }
+    //public void askForPayingTheBankAndGetFree(List<Player>players, int i) {
     //Newinterface -implements Prison, card+
     public static String[][] seeTheChanceCard(String[][] pPAM, int i) {
         int number = getRandomFrom0To6();
@@ -119,7 +96,7 @@ public class Main {
             pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) - sum);
         } else {
             System.out.print("puts you in prison! ");
-            pPAM = askForPayingTheBankAndGetFree(pPAM, i);
+            //pPAM = askForPayingTheBankAndGetFree(pPAM, i);
         }
         return pPAM;
     }
@@ -137,7 +114,7 @@ public class Main {
             pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) - sum);
         } else {
             System.out.print("puts you in prison!");
-            pPAM = askForPayingTheBankAndGetFree(pPAM, i);
+            //pPAM = askForPayingTheBankAndGetFree(pPAM, i);
         }
         return pPAM;
     }
@@ -192,18 +169,7 @@ public class Main {
         System.out.println();
     }
     //Main
-    public static String[][] throwTheDicesToGetOutOfJail(String[][] pPAM, int i) {
-        int firstNum = (int) Math.floor(Math.random() * (6 - 1 + 1) + 1);
-        int secondNum = (int) Math.floor(Math.random() * (6 - 1 + 1) + 1);
-        if (firstNum == secondNum) {
-            System.out.println("Lucky you! You got " + firstNum + "-" + secondNum + " from the dices and you're free!\n" +
-                    "Now throw the dices to get to your new position!");
-            pPAM[1][i] = Integer.toString(12);
-        } else {
-            System.out.println("You got " + firstNum + "-" + secondNum + " from the dices and you aren't free!");
-        }
-        return pPAM;
-    }
+    //public static String[][] throwTheDicesToGetOutOfJail(List<Player> pPAM, int i) {
     //cardPrison
     public static void putPlayersAtStart(List<Player> players){
         for (int i = 0; i < playersCount; i++) {
@@ -213,7 +179,7 @@ public class Main {
     public static void startTheGame() {
         List<Player> players=new ArrayList<Player>();
         putPlayersAtStart(players);
-        ArrayList<Positions> positions=new ArrayList<Positions>(40);//ListOfPositions
+        ArrayList<Position> positions=new ArrayList<Position>(40);//ListOfPositions
         setPositionsByDefault(positions);
         //int[][] prices = getPrices();//static prices in Position Of Building
         int br = playersCount;//saves the number of players who hasn't bankrupted yet
@@ -221,11 +187,11 @@ public class Main {
             for (int i = 0; i < playersCount; i++) {
                 if (!players.get(i).isHasBankrupted() && br != 1) {//if the player hasn't bankrupted or isn't the only one left
                     if (players.get(i).isBeingInJail()) {
-                        tryToGetOutOfJail(players,i,positions);//PositionsForJail
+                        positions.get(players.get(i).getCurrentPosition()-1).seeWhatThePositionOffersOrTakes(players,i,positions);//PositionsForJail
                     }
                     if(!players.get(i).isBeingInJail())
                     setTheNewPosition(players.get(i));
-                    seeWhatTheNewPositionOffersOrTakes(players,i,positions);
+                    positions.get(players.get(i).getCurrentPosition()-1).seeWhatThePositionOffersOrTakes(players,i,positions);
                     showThePlayersPositionAndMoney(players);
                     showAllThePropertiesPfThePlayers(players,positions);
                 }

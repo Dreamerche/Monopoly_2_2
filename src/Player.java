@@ -21,7 +21,6 @@ public class Player {
         this.cash = 1500;
         this.currentPosition = 1;
         this.beingInJail = false;
-        this.hasBankrupted = false;
         this.hasBankrupted=false;
     }
 
@@ -38,6 +37,10 @@ public class Player {
     }
 
     public void setCash(double cash) {
+        if(cash<0){
+            System.out.println(getName()+" has bankrupted.");
+            setHasBankrupted(true);
+        }
         this.cash = cash;
     }
 
@@ -61,7 +64,6 @@ public class Player {
         return hasBankrupted;
     }
 
-    public void setHasBankrupted(boolean hasBankrupted) {
-        this.hasBankrupted = hasBankrupted;
+    public void setHasBankrupted(boolean hasBankrupted) {this.hasBankrupted = hasBankrupted;
     }
 }

@@ -1,7 +1,10 @@
-public class Positions {
+import java.lang.management.PlatformLoggingMXBean;
+import java.util.List;
+
+public class Position implements PLayable {
     protected int numberPosition;
 
-    public Positions(int numberPosition) {
+    public Position(int numberPosition) {
         this.numberPosition = numberPosition;
     }
 
@@ -18,5 +21,10 @@ public class Positions {
         return "Positions{" +
                 "numberPosition=" + numberPosition +
                 '}';
+    }
+
+    @Override
+    public void seeWhatThePositionOffersOrTakes(List<Player> players, int i, List<Position> positions) {
+
     }
 }

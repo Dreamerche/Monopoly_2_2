@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class PositionForBuilding extends Positions {
+public class PositionForBuilding extends Position {
     static int numberPosition;
 
 

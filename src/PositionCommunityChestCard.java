@@ -1,12 +1,14 @@
 import java.util.List;
 import java.util.Scanner;
 
-public class PositionCommunityChestCard extends Positions implements Askablе {
+public class PositionCommunityChestCard extends Position implements Askablе{
 
     public PositionCommunityChestCard(int numberPosition) {
         super(numberPosition);
     }
-
+    public void seeWhatThePositionOffersOrTakes(List<Player>players,int i,List<Position>positions){
+        seeTheCommunityChestCard(players,i);
+    }
     @Override
     public String toString() {
         return "PositionCommunityChestCart{" +
@@ -14,51 +16,26 @@ public class PositionCommunityChestCard extends Positions implements Askablе {
                 '}';
     }
 
-    public static String[][] askForPayingTheBankAndGetFree(String[][] pPAM, int i) {
-        Scanner scan = new Scanner(System.in);
-        if (Integer.parseInt(pPAM[2][i]) >= 50)//check if the player has 50 money
-        {
-            while (true) {
-                System.out.print("Do you want to pay the bank 50 money and not get in jail?\n" +
-                        "Type \"y\" for yes or \"n\" for no:");
-                String option = scan.nextLine();
-                if (option.equalsIgnoreCase("y")) {
-                    pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) - 50);
-                    break;
-                } else if (option.equalsIgnoreCase("n")) {
-                    System.out.println(pPAM[0][i] + " goes to jail.");
-                    pPAM[1][i] = Integer.toString(11);
-                    break;
-                } else {
-                    System.out.println("Incorrect input, try again, " + pPAM[0][i] + ".");
-                }
-            }
-        }
-        return pPAM;
-    }
-
-    public static int getRandomFrom0To6() {
+    private static int getRandomFrom0To6() {
         return (int) Math.floor(Math.random() * (7 - 0 + 0) + 0);
     }
 
-    public static String[][] seeTheCommunityChestCard(String[][] pPAM, int i) {
+    private void seeTheCommunityChestCard(List<Player> players, int i) {
         int number = getRandomFrom0To6();
-        System.out.print(pPAM[0][i] + ", your community chest card ");
+        System.out.print(players.get(i).getName() + ", your community chest card ");
         if (number <= 2) {
             int sum = (number + 1) * 50;
             System.out.println("gives you " + sum + " money!");
-            pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) + sum);
+            players.get(i).setCash(players.get(i).getCash() + sum);
         } else if (number <= 5) {
             int sum = 100;
             System.out.println("gets from you " + sum + " money and gives them to the bank!");
-            pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) - sum);
+            players.get(i).setCash(players.get(i).getCash() - sum);
         } else {
             System.out.print("puts you in prison!");
-            pPAM = askForPayingTheBankAndGetFree(pPAM, i);
+            askForPayingTheBankAndGetFree(players, i);
         }
-        return pPAM;
     }
-
 
     @Override
     public void askForPayingTheBankAndGetFree(List<Player> players, int i) {
