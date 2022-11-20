@@ -16,8 +16,8 @@ public class PositionCommunityChestCard extends Position implements Askablе{
                 '}';
     }
 
-    private static int getRandomFrom0To6() {
-        return (int) Math.floor(Math.random() * (7 - 0 + 0) + 0);
+    protected int getRandomFrom0To6() {
+        return (int) Math.floor(Math.random() * (6 - 0 + 0) + 0);
     }
 
     private void seeTheCommunityChestCard(List<Player> players, int i) {

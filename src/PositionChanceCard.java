@@ -16,8 +16,8 @@ public class PositionChanceCard extends Position implements Askablе{
     public void seeWhatThePositionOffersOrTakes(List<Player>players,int i,List<Position>positions){
         seeTheChanceCard(players,i);
     }
-    private static int getRandomFrom0To6() {
-        return (int) Math.floor(Math.random() * (7 - 0 + 0) + 0);
+    protected int getRandomFrom0To6() {
+        return (int) Math.floor(Math.random() * (6 - 0 + 0) + 0);
     }
     private void seeTheChanceCard(List<Player> players, int i) {
         int number = getRandomFrom0To6();

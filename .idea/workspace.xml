@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="Test by">
+    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="Test..">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestaskForPayingTheBankAndGetFree.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestaskForPayingTheBankAndGetFree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/TestaskForPayingTheBankAndGetFree.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestGetRandom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PositionChanceCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionChanceCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PositionCommunityChestCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionCommunityChestCard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +73,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestaskForPayingTheBankAndGetFree">
+  <component name="RunManager" selected="JUnit.TestGetRandom">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Monopoly_2_2" />
@@ -79,18 +81,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestaskForPayingTheBankAndGetFree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestGetRandom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Monopoly_2_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestaskForPayingTheBankAndGetFree" />
+      <option name="MAIN_CLASS_NAME" value="TestGetRandom" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestGetRandom.testGetRandomFrom0to6When" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Monopoly_2_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestGetRandom" />
+      <option name="METHOD_NAME" value="testGetRandomFrom0to6When" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestaskForPayingTheBankAndGetFree" />
+        <item itemvalue="JUnit.TestGetRandom" />
+        <item itemvalue="JUnit.TestGetRandom.testGetRandomFrom0to6When" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -188,7 +201,28 @@
       <option name="project" value="LOCAL" />
       <updated>1668937666357</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Test by metods">
+      <created>1668957580455</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1668957580455</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Test..">
+      <created>1668957739739</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1668957739739</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Test..">
+      <created>1668957880283</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1668957880283</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -216,7 +250,9 @@
     <MESSAGE value="GiveMoneyblе" />
     <MESSAGE value="Test" />
     <MESSAGE value="Test by" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test by" />
+    <MESSAGE value="Test by metods" />
+    <MESSAGE value="Test.." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test.." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
