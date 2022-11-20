@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class TestaskForPayingTheBankAndGetFree {
     Scanner scan = new Scanner(System.in);
 
- @Test
+
 
 //    assertTrue
 //    public class CalculatorTest {
