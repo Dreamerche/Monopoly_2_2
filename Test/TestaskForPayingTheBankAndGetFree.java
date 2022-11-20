@@ -7,7 +7,7 @@ public class TestaskForPayingTheBankAndGetFree {
 
 
 
-//    assertTrue
+//    assertTrue-First
 //    public class CalculatorTest {
 //        private Calculator calc = new Calculator();
 
