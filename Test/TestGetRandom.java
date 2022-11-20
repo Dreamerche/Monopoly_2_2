@@ -24,11 +24,12 @@ public class TestGetRandom {
         List<Integer> testList1 = Arrays.asList(0, 1, 2, 3, 4, 5, 6);
         PositionChanceCard testPosition = new PositionChanceCard(10);
 
-        for (int i = 0; i <= 7; i++) {
-            Assert.assertTrue("Method doesn't return expected value",testList1.contains(testPosition.getRandomFrom0To6()));
+        Assert.assertTrue("Method doesn't return expected value",testList1.contains(testPosition.getRandomFrom0To6()));
         }
     }
-}
+
+
+
 
 
 

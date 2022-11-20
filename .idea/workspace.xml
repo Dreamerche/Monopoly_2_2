@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="testGetRandom">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="testGetRandom..">
       <change beforePath="$PROJECT_DIR$/Test/TestGetRandom.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestGetRandom.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +70,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Monopoly_2_2">
+  <component name="RunManager" selected="JUnit.TestGetRandom">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Monopoly_2_2" />
@@ -108,8 +107,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in Monopoly_2_2" />
         <item itemvalue="JUnit.TestGetRandom" />
+        <item itemvalue="JUnit.All in Monopoly_2_2" />
         <item itemvalue="JUnit.TestGetRandom.testGetRandomFrom0to6When" />
         <item itemvalue="Application.Main" />
       </list>
@@ -236,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668962771020</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="testGetRandom..">
+      <created>1668965807189</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1668965807189</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,7 +273,8 @@
     <MESSAGE value="Test by metods" />
     <MESSAGE value="Test.." />
     <MESSAGE value="testGetRandom" />
-    <option name="LAST_COMMIT_MESSAGE" value="testGetRandom" />
+    <MESSAGE value="testGetRandom.." />
+    <option name="LAST_COMMIT_MESSAGE" value="testGetRandom.." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
