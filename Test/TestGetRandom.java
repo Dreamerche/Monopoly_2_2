@@ -23,7 +23,6 @@ public class TestGetRandom {
     }
     @Test
     public void testSeeTheCommunityChestCard() {
-
         Player player3=new Player("Name for test 3");
         PositionCommunityChestCard positionCommunityChestCard3=new PositionCommunityChestCard(1);
         player3.setCurrentPosition(positionCommunityChestCard3.getNumberPosition());
@@ -36,7 +35,6 @@ public class TestGetRandom {
     }
     @Test
     public void testSeeTheChanceCard() {
-
         Player player4=new Player("Name for test 4");
         PositionChanceCard positionChanceCard4=new PositionChanceCard(1);
         player4.setCurrentPosition(positionChanceCard4.getNumberPosition());
