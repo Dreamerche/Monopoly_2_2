@@ -63,15 +63,10 @@ public class Main {
         }
     }//Main
 
+    public static void showAllThePropertiesPfThePlayers(List<Player>players,List<Position>positions) {
 
-    //public static boolean askForBuyingThePlace(String n, String[][] pPAM, int position, int[][] prices) {
-    //classPositionForBuilding
-    //public static boolean askForBuyingAHouse(int[][] pWCBBO, String[][] pPAM, int i, int[][] prices, int a)
-    //classPositionForBuilding
-    //public static boolean askForBuyingAHotel(int[][] pWCBBO, String[][] pPAM, int i, int[][] prices, int a)
-    //classPositionForBuilding
-    public static void showAllThePropertiesPfThePlayers(String[][] pPAM, int[][] pWCBBO) {
-        for (int i = 0; i < pPAM[0].length; i++) {
+        List<Player> ownersOfPositions
+    for (int i = 0; i < pPAM[0].length; i++) {
             int sum = 0;
             for (int j = 0; j < pWCBBO[0].length; j++) {
                 if (i == pWCBBO[1][j]) {
@@ -126,7 +121,7 @@ public class Main {
                     positions.get(players.get(i).getCurrentPosition()-1).seeWhatThePositionOffersOrTakes(players,i,positions);
                     }
                     showThePlayersPositionAndMoney(players);
-                    //showAllThePropertiesPfThePlayers(players,positions);
+                    showAllThePropertiesPfThePlayers(players,positions);
                 }
             }
         }

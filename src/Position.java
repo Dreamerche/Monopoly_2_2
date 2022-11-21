@@ -27,4 +27,5 @@ public class Position implements PLayable {
     public void seeWhatThePositionOffersOrTakes(List<Player> players, int i, List<Position> positions) {
         //will be used by the children with overriding in addition to their needs
     }
+
 }

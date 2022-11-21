@@ -1,37 +1,66 @@
 import java.util.List;
 import java.util.Scanner;
-public class PositionForBuilding extends Position {
-    private static final int buyAPosition=300;
-    private static final int buyAHouse=150;
-    private static final int buyAHotel=100;
 
-    private static final int rentAPosition=200;
-    private static final int rentAHouse=100;
-    private static final int rentAHotel=50;
+public class PositionForBuilding extends Position {
+    private static final int buyAPosition = 300;
+    private static final int buyAHouse = 150;
+    private static final int buyAHotel = 100;
+
+    private static final int rentAPosition = 200;
+    private static final int rentAHouse = 100;
+    private static final int rentAHotel = 50;
     private int owner;
     private int amountOfHouses;
     private int amountOfHotels;
-    public void seeWhatThePositionOffersOrTakes(List<Player> players, int i, List<Position>positions){
+
+    public void seeWhatThePositionOffersOrTakes(List<Player> players, int i, List<Position> positions) {
+        if (isTheBankTheOwner()) {
+            if(askForBuyingThePlace(players,i)){
+                System.out.println(buyThePlace(players,i));
+            }
+        }
+        else {
+            System.out.println(payTheOwner(players,i));
+        }
         System.out.println("Working on this method");
     }
-    public static boolean askForBuyingThePlace(String n, String[][] pPAM, int position, int[][] prices) {
+    protected String payTheOwner(List<Player> players,int i){
+        int sum=rentAPosition+(rentAHouse*amountOfHouses)+(rentAHotel*amountOfHotels);
+        players.get(owner).setCash(players.get(owner).getCash()+sum);
+        players.get(i).setCash(players.get(i).getCash()-sum);
+        return (players.get(i).getName()+" gave "+sum+" rent to "+players.get(owner).getName()+".");
+    }
+    protected String buyThePlace(List<Player> players,int i){
+        owner=i;
+        players.get(i).setCash(players.get(i).getCash()-buyAPosition);
+        return ("The place on position "+getNumberPosition()+" is bought by "+players.get(i).getName()+".");
+    }
+    protected boolean isTheBankTheOwner() {
+        if (owner == -1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean askForBuyingThePlace(List<Player> players, int i) {
         Scanner scan = new Scanner(System.in);
-        boolean check = false;
-        if (Integer.parseInt(pPAM[2][position]) >= prices[0][0])
+        if (players.get(i).getCash() >= buyAPosition) {
             while (true) {
-                System.out.print(n + ", do you want to buy this position, " + pPAM[1][position] + ", for " + prices[0][0] + "? Type \"y\" for yes or \"n\" for no: ");
+                System.out.print(players.get(i).getName() + ", do you want to buy this position, " + getNumberPosition() + ", for " + buyAPosition + "? Type \"y\" for yes or \"n\" for no: ");
                 String answer = scan.nextLine();
                 if (answer.equalsIgnoreCase("y")) {
-                    check = true;
-                    break;
+                    return true;
                 } else if (answer.equalsIgnoreCase("n")) {
-                    break;
+                    return false;
                 } else {
-                    System.out.println("Incorrect input, try again, " + n + ".");
+                    System.out.println("Incorrect input, try again, " + players.get(i).getName() + ".");
                 }
             }
-        return check;
+        }
+        return false;
     }
+
     public static boolean askForBuyingAHouse(int[][] pWCBBO, String[][] pPAM, int i, int[][] prices, int a) {
         Scanner scan = new Scanner(System.in);
         boolean check = false;
@@ -52,6 +81,7 @@ public class PositionForBuilding extends Position {
         }
         return check;
     }
+
     public static boolean askForBuyingAHotel(int[][] pWCBBO, String[][] pPAM, int i, int[][] prices, int a) {
         Scanner scan = new Scanner(System.in);
         boolean check = false;
@@ -72,6 +102,7 @@ public class PositionForBuilding extends Position {
         }
         return check;
     }
+
     public static int whatIsPutInThePosition(int[][] pWCBBO, int[][] prices, String[][] pPAM, int a, int i) {
         int sum = prices[1][0] + pWCBBO[2][a] * prices[1][1] + pWCBBO[3][a] * prices[1][2];
         return sum;
@@ -83,9 +114,11 @@ public class PositionForBuilding extends Position {
         this.amountOfHouses = 0;
         this.amountOfHotels = 0;
     }
+
     public int getOwner() {
         return owner;
     }
+
     public void setOwner(int owner) {
         this.owner = owner;
     }
@@ -93,6 +126,7 @@ public class PositionForBuilding extends Position {
     public int getAmountOfHouses() {
         return amountOfHouses;
     }
+
     public void setAmountOfHouses(int amountOfHouses) {
         if (amountOfHouses < 0) {
             amountOfHouses = 0;
@@ -102,9 +136,11 @@ public class PositionForBuilding extends Position {
         }
         this.amountOfHouses = amountOfHouses;
     }
+
     public int getAmountOfHotels() {
         return amountOfHotels;
     }
+
     public void setAmountOfHotels(int amountOfHotels) {
         if (amountOfHotels < 0) {
             amountOfHotels = 0;
