@@ -121,9 +121,10 @@ public class Main {
                     if (players.get(i).isBeingInJail()) {
                         positions.get(players.get(i).getCurrentPosition()-1).seeWhatThePositionOffersOrTakes(players,i,positions);//PositionsForJail
                     }
-                    if(!players.get(i).isBeingInJail())
+                    if(!players.get(i).isBeingInJail()){
                     players.get(i).setTheNewPosition(players,i);
                     positions.get(players.get(i).getCurrentPosition()-1).seeWhatThePositionOffersOrTakes(players,i,positions);
+                    }
                     showThePlayersPositionAndMoney(players);
                     //showAllThePropertiesPfThePlayers(players,positions);
                 }

@@ -31,10 +31,6 @@ public class Player implements MoveOnBoardable {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public double getCash() {
         return cash;
     }
@@ -86,7 +82,7 @@ public class Player implements MoveOnBoardable {
         System.out.println("Now " + getName() + " is on position " + getCurrentPosition() + ".\n");
     }
 
-    private void throwTheDices() {//test if you can
+    public void throwTheDices() {//test if you can
         Scanner scan = new Scanner(System.in);
         System.out.print(getName() + ", throw the dices by typing \"t\": ");
         while (true) {
@@ -96,11 +92,13 @@ public class Player implements MoveOnBoardable {
             }
         }
     }
-
+    public int getRandomNumberFromMinToMax( int minNumber, int maxNumber){
+        return (int) Math.floor(Math.random() * (maxNumber+1) + minNumber);
+    }
     private int getResultFromDices() {//test result>=2 && result<=12
         int sum = 0;
-        sum += Math.floor(Math.random() * (6 - 1 + 1) + 1);
-        sum += Math.floor(Math.random() * (6 - 1 + 1) + 1);
+        sum += getRandomNumberFromMinToMax(1,6);
+        sum += getRandomNumberFromMinToMax(1,6);
         return sum;
     }
 

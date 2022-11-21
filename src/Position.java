@@ -25,6 +25,6 @@ public class Position implements PLayable {
 
     @Override
     public void seeWhatThePositionOffersOrTakes(List<Player> players, int i, List<Position> positions) {
-
+        System.out.println("There's nothing special about this position.\n");
     }
 }

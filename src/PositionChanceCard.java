@@ -1,61 +1,40 @@
 import java.util.List;
 import java.util.Scanner;
 
-public class PositionChanceCard extends Position implements Askablе{
+public class PositionChanceCard extends PositionsPuttingPlayerInPrison{
 
     public PositionChanceCard(int numberPosition) {
         super(numberPosition);
     }
+
     @Override
     public String toString() {
-        return "PositionChanceCard{" +
-                "numberPosition=" + numberPosition +
-                '}';
+        return super.toString();
     }
+
     @Override
     public void seeWhatThePositionOffersOrTakes(List<Player>players,int i,List<Position>positions){
-        seeTheChanceCard(players,i);
+        String isTheCardPuttingInJail=seeTheChanceCard(players,i);
+        if(isTheCardPuttingInJail.equalsIgnoreCase("third scenario")){
+            System.out.println(super.askForPayingTheBankAndGetFree(players, i));
+        }
     }
-    protected int getRandomFrom0To6() {
-        return (int) Math.floor(Math.random() * (6 - 0 + 0) + 0);
-    }
-    private void seeTheChanceCard(List<Player> players, int i) {
-        int number = getRandomFrom0To6();
+    protected String seeTheChanceCard(List<Player> players, int i) {//we couldn't think of another way to make a void better for testing
+        int number = players.get(i).getRandomNumberFromMinToMax(0,6);
         System.out.print(players.get(i).getName() + ", your chance card ");
         if (number <= 3) {
             int sum = (number + 1) * 50;
-            System.out.println("gives you " + sum + " money!");
+            System.out.println("gives you " + sum + " money!\n");
             players.get(i).setCash(players.get(i).getCash() + sum);
+            return "first scenario";
         } else if (number <= 5) {
             int sum = 100;
-            System.out.println("gets from you " + sum + " money and gives them to the bank!");
+            System.out.println("gets from you " + sum + " money and gives them to the bank!\n");
             players.get(i).setCash(players.get(i).getCash() - sum);
+            return "second scenario";
         } else {
-            System.out.print("puts you in prison! ");
-            askForPayingTheBankAndGetFree(players, i);
-        }
-    }
-    @Override
-    public void askForPayingTheBankAndGetFree(List<Player> players, int i) {
-        Scanner scan = new Scanner(System.in);
-        if (players.get(i).getCash() >= 50.0)//check if the player has 50 money
-        {
-            while (true) {
-                System.out.print("Do you want to pay the bank 50 money and not get in jail?\n" +
-                        "Type \"y\" for yes or \"n\" for no:");
-                String option = scan.nextLine();
-                if (option.equalsIgnoreCase("y")) {
-                    players.get(i).setCash(players.get(i).getCash() - 50);
-                    break;
-                } else if (option.equalsIgnoreCase("n")) {
-                    System.out.println(players.get(i).getName() + " goes to jail.");
-                    players.get(i).setCurrentPosition(11);
-                    players.get(i).setBeingInJail(true);
-                    break;
-                } else {
-                    System.out.println("Incorrect input, try again, " + players.get(i).getName() + ".");
-                }
-            }
+            System.out.print("puts you in prison!");
+            return "third scenario";
         }
     }
 }
