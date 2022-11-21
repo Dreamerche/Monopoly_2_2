@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     static int playersCount=0;
@@ -31,16 +28,6 @@ public class Main {
         }
     }//
 
-    public static String[][] putNicknamesPlaceThePlayersOnStartAnGiveThemMoney(String[] n) {
-        String[][] a = new String[3][n.length];
-        for (int i = 0; i < n.length; i++) {
-            a[0][i] = n[i];
-            a[1][i] = "0";
-            a[2][i] = "1500";
-        }
-        return a;
-    }//Main
-
     public static void showThePlayersPositionAndMoney(List<Player> players) {
         System.out.println("Player | Position | Money");
         for (int i = 0; i < playersCount; i++) {
@@ -50,21 +37,32 @@ public class Main {
     }//Main
 
     public static void setPositionsByDefault(List<Position> positions) {
-        int[] positionsWithPlacesForBuilding = {2, 4, 7, 9, 10, 12, 14, 15, 17, 19, 20, 22, 24, 25, 27, 28, 30, 32, 33, 35, 38, 40};//positions
-        int[][] pWCBBO = new int[4][positionsWithPlacesForBuilding.length];
-        for (int i = 0; i < positionsWithPlacesForBuilding.length; i++) {
-            pWCBBO[0][i] = positionsWithPlacesForBuilding[i];//positions
-            pWCBBO[1][i] = -1;//owner, if -1, it's a bank's property
-            pWCBBO[2][i] = 0;//houses on this place
-            pWCBBO[3][i] = 0;//hotels on this place
+        //lists with the indexes, when playing, we typically chose the first position to be position 1, but in the programming
+        //the first element in the list positions has index 0, that's why in the for we check if (i+1)=40
+        List<Integer> positionsWithPlacesForBuilding = Arrays.asList(2, 4, 7, 9, 10, 12, 14, 15, 17, 19, 20, 22, 24, 25, 27, 28, 30, 32, 33, 35, 38, 40);//positions
+        List<Integer> chancePositions=Arrays.asList(8,23,37);//0-3: receive 50,100,150,200 money, 4-5: give 100 to the bank, 6:go to jail
+        List<Integer> communityPositions=Arrays.asList(3,18,34);//0-2: receive 50,100,150 money, 3-5: give 100 money, 6: go to jailint[] positionsWithChanceCards={};
+        List<Integer> jailPositions=Arrays.asList(11,31);
+        for (int i = 0; i < 40; i++) {//1
+            if(positionsWithPlacesForBuilding.contains(i+1))
+            {
+                positions.add(new PositionForBuilding(i+1));
+            }
+            else if(chancePositions.contains(i+1)){
+                positions.add(new PositionChanceCard(i+1));
+            }
+            else if(communityPositions.contains(i+1)){
+                positions.add(new PositionCommunityChestCard(i+1));
+            }
+            else if(jailPositions.contains(i+1)){
+                positions.add(new PositionPrison(i+1));
+            }
+            else{
+                positions.add(new Position(i+1));//if the position don't have anything special, it's just a position
+            }
         }
     }//Main
 
-    //public static int[][] getPrices() {
-//PositionForBuilding
-
-    //public static int checkIfThePositionIsPlaceForBuilding(String playerPosition, int[][] p) {
-//getOnNewPosition() -да го създам в интерфейс
 
     //public static boolean askForBuyingThePlace(String n, String[][] pPAM, int position, int[][] prices) {
     //classPositionForBuilding
@@ -72,18 +70,6 @@ public class Main {
     //classPositionForBuilding
     //public static boolean askForBuyingAHotel(int[][] pWCBBO, String[][] pPAM, int i, int[][] prices, int a)
     //classPositionForBuilding
-    //public static int whatIsPutInThePosition(int[][] pWCBBO, int[][] prices, String[][] pPAM, int a, int i) {
-    //classPositionForBuilding
-    public static int getRandomFrom0To6() {
-        return (int) Math.floor(Math.random() * (7 - 0 + 0) + 0);
-    }
-    //cardsPosition
-    //public void askForPayingTheBankAndGetFree(List<Player>players, int i) {
-    //Newinterface -implements Prison, card+
-    //public static String[][] seeTheChanceCard(String[][] pPAM, int i) {
-    //chanceCard
-    //public static String[][] seeTheCommunityChestCard(String[][] pPAM, int i) {
-    //CommunityChestCard
     public static void showAllThePropertiesPfThePlayers(String[][] pPAM, int[][] pWCBBO) {
         for (int i = 0; i < pPAM[0].length; i++) {
             int sum = 0;
@@ -117,8 +103,6 @@ public class Main {
         System.out.println();
     }
     //Main
-    //public static String[][] throwTheDicesToGetOutOfJail(List<Player> pPAM, int i) {
-    //cardPrison
     public static void putPlayersAtStart(List<Player> players){
         letsPickNicknames();
         for (int i = 0; i < playersCount; i++) {
@@ -130,7 +114,6 @@ public class Main {
         putPlayersAtStart(players);
         ArrayList<Position> positions=new ArrayList<Position>(40);//ListOfPositions
         setPositionsByDefault(positions);
-        //int[][] prices = getPrices();//static prices in Position Of Building
         int br = playersCount;//saves the number of players who hasn't bankrupted yet
         while (br != 1) {//while we have at least 2 to be playing
             for (int i = 0; i < playersCount; i++) {

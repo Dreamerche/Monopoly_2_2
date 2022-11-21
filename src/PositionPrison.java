@@ -15,21 +15,36 @@ public class PositionPrison extends Position implements Askablе, OutOfJailable 
     }
     @Override
     public void seeWhatThePositionOffersOrTakes(List<Player>players,int i,List<Position>positions){
-        throwTheDicesToGetOutOfJail(players,i);
+        if(!players.get(i).isBeingInJail()){
+            askForPayingTheBankAndGetFree(players,i);
+        }
+        else {
+            System.out.println(throwTheDicesToGetOutOfJail(players, i));
+        }
     }
     @Override
-    public void throwTheDicesToGetOutOfJail(List<Player> players, int i) {
+    public String throwTheDicesToGetOutOfJail(List<Player> players, int i) {
+        throwTheDices(players,i);
         int firstNum = (int) Math.floor(Math.random() * (6 - 1 + 1) + 1);
         int secondNum = (int) Math.floor(Math.random() * (6 - 1 + 1) + 1);
         if (firstNum == secondNum) {
-            System.out.println("Lucky you! You got " + firstNum + "-" + secondNum + " from the dices and you're free!\n" +
-                    "Now throw the dices to get to your new position!");
             players.get(i).setBeingInJail(false);
+            return ("Lucky you! You got " + firstNum + "-" + secondNum + " from the dices and you're free!\n" +
+                    "Now throw the dices to get to your new position!");
         } else {
-            System.out.println("You got " + firstNum + "-" + secondNum + " from the dices and you aren't free!");
+            return ("You got " + firstNum + "-" + secondNum + " from the dices and you aren't free!");
         }
     }
-
+    private void throwTheDices(List<Player> players, int i) {//test if you can
+        Scanner scan = new Scanner(System.in);
+        System.out.print(players.get(i) + ", throw the dices by typing \"t\": ");
+        while (true) {
+            String typed = scan.nextLine();
+            if (typed.equalsIgnoreCase("t")) {
+                break;
+            }
+        }
+    }
     @Override
     public void askForPayingTheBankAndGetFree(List<Player> players, int i) {
 

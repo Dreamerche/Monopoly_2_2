@@ -80,13 +80,13 @@ public class Player implements MoveOnBoardable {
         if (getCurrentPosition() > 40) {
             setCurrentPosition(getCurrentPosition() - 40);
             setCash(getCash() + 200);
-            System.out.print(getName()+ " gains 200 money. ");
+            System.out.print(getName()+ " gains 200 money, because they passed the start. ");
 
         }
         System.out.println("Now " + getName() + " is on position " + getCurrentPosition() + ".\n");
     }
 
-    private void throwTheDices() {
+    private void throwTheDices() {//test if you can
         Scanner scan = new Scanner(System.in);
         System.out.print(getName() + ", throw the dices by typing \"t\": ");
         while (true) {
@@ -97,7 +97,7 @@ public class Player implements MoveOnBoardable {
         }
     }
 
-    private int getResultFromDices() {
+    private int getResultFromDices() {//test result>=2 && result<=12
         int sum = 0;
         sum += Math.floor(Math.random() * (6 - 1 + 1) + 1);
         sum += Math.floor(Math.random() * (6 - 1 + 1) + 1);

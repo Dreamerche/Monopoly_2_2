@@ -1,70 +1,18 @@
+import java.util.List;
 import java.util.Scanner;
 public class PositionForBuilding extends Position {
-    static int numberPosition;
+    private static final int buyAPosition=300;
+    private static final int buyAHouse=150;
+    private static final int buyAHotel=100;
 
-
-    public int owner;
+    private static final int rentAPosition=200;
+    private static final int rentAHouse=100;
+    private static final int rentAHotel=50;
+    private int owner;
     private int amountOfHouses;
     private int amountOfHotels;
-
-    public PositionForBuilding(int numberPosition) {
-        super(numberPosition);
-        this.owner = -1;
-        this.amountOfHouses = 0;
-        this.amountOfHotels = 0;
-    }
-    public int getOwner() {
-        return owner;
-    }
-    public void setOwner(int owner) {
-        this.owner = owner;
-    }
-
-    public int getAmountOfHouses() {
-        return amountOfHouses;
-    }
-    public void setAmountOfHouses(int amountOfHouses) {
-        if (amountOfHouses < 0) {
-            amountOfHouses = 0;
-
-        } else if (amountOfHouses > 4) {
-            amountOfHouses = 4;
-        }
-        this.amountOfHouses = amountOfHouses;
-    }
-    public int getAmountOfHotels() {
-        return amountOfHotels;
-    }
-    public void setAmountOfHotels(int amountOfHotels) {
-        if (amountOfHotels < 0) {
-            amountOfHotels = 0;
-
-        } else if (amountOfHotels > 1) {
-            amountOfHotels = 1;
-        }
-        this.amountOfHotels = amountOfHotels;
-    }
-    @Override
-    public String toString() {
-        return "PositionForBuilding{" +
-                "owner=" + owner +
-                ", amountOfHouses=" + amountOfHouses +
-                ", amountOfHotels=" + amountOfHotels +
-                '}';
-    }
-
-    public static int[][] getPrices() {
-        int price;
-        int[] [] prices = {
-                {300, 200, 300},//i made them higher because the game will be really slow for testing otherwise:)
-                {250, 500, 700},
-                {150, 100, 150}
-                //place | house | hotel
-                /*{150, 100, 150},//buy
-                {10,25,35},//rent
-                {75,50,75}//sell*/
-        };
-        return prices;
+    public void seeWhatThePositionOffersOrTakes(List<Player> players, int i, List<Position>positions){
+        System.out.println("Working on this method");
     }
     public static boolean askForBuyingThePlace(String n, String[][] pPAM, int position, int[][] prices) {
         Scanner scan = new Scanner(System.in);
@@ -128,4 +76,53 @@ public class PositionForBuilding extends Position {
         int sum = prices[1][0] + pWCBBO[2][a] * prices[1][1] + pWCBBO[3][a] * prices[1][2];
         return sum;
     }
+
+    public PositionForBuilding(int numberPosition) {
+        super(numberPosition);
+        this.owner = -1;
+        this.amountOfHouses = 0;
+        this.amountOfHotels = 0;
+    }
+    public int getOwner() {
+        return owner;
+    }
+    public void setOwner(int owner) {
+        this.owner = owner;
+    }
+
+    public int getAmountOfHouses() {
+        return amountOfHouses;
+    }
+    public void setAmountOfHouses(int amountOfHouses) {
+        if (amountOfHouses < 0) {
+            amountOfHouses = 0;
+
+        } else if (amountOfHouses > 4) {
+            amountOfHouses = 4;
+        }
+        this.amountOfHouses = amountOfHouses;
+    }
+    public int getAmountOfHotels() {
+        return amountOfHotels;
+    }
+    public void setAmountOfHotels(int amountOfHotels) {
+        if (amountOfHotels < 0) {
+            amountOfHotels = 0;
+
+        } else if (amountOfHotels > 1) {
+            amountOfHotels = 1;
+        }
+        this.amountOfHotels = amountOfHotels;
+    }
+
+    @Override
+    public String toString() {
+        return "PositionForBuilding{" +
+                "numberPosition=" + getNumberPosition() +
+                ", owner=" + getOwner() +
+                ", amountOfHouses=" + getAmountOfHouses() +
+                ", amountOfHotels=" + getAmountOfHotels() +
+                '}';
+    }
+
 }
