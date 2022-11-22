@@ -1,0 +1,55 @@
+Index: src/GiveMoneyblе.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.List;\r\n\r\npublic interface GiveMoneyblе {\r\n\r\n    static void giveMoneyToThePlayer(List<Player> players, int i)\r\n\r\n\r\n\r\n    {\r\n        //int sum = prices[2][0] + (prices[2][1] * pWCBBO[2][j]) + (prices[2][2] * pWCBBO[3][j]);\r\n        //pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) + sum);\r\n        //return pPAM;\r\n    }\r\n}\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/GiveMoneyblе.java b/src/GiveMoneyblе.java
+--- a/src/GiveMoneyblе.java	
++++ b/src/GiveMoneyblе.java	
+@@ -1,16 +1,13 @@
+ import java.util.List;
+ 
+ public interface GiveMoneyblе {
++    void giveMoneyToThePlayer(List<Player> players, int i);
++}
+ 
+-    static void giveMoneyToThePlayer(List<Player> players, int i)
+ 
+ 
+ 
+-    {
+-        //int sum = prices[2][0] + (prices[2][1] * pWCBBO[2][j]) + (prices[2][2] * pWCBBO[3][j]);
+-        //pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) + sum);
+-        //return pPAM;
+-    }
+-}
++
++
+ 
+ 
+Index: src/GiveMoney.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/GiveMoney.java b/src/GiveMoney.java
+new file mode 100644
+--- /dev/null	
++++ b/src/GiveMoney.java	
+@@ -0,0 +1,14 @@
++import java.util.List;
++
++public class GiveMoney {
++
++    static void giveMoneyToThePlayer(List<Player> players, int i)    {
++
++        int sum = prices[2][0] + (prices[2][1] * pWCBBO[2][j]) + (prices[2][2] * pWCBBO[3][j]);
++
++        pPAM[2][i] = Integer.toString(Integer.parseInt(pPAM[2][i]) + sum);
++
++        return pPAM;
++    }
++}
++

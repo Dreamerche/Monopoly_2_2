@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="working on buying a place and paying rent">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_11_2022___22_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_11_2022___22_30__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_11_2022___18_17__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_11_2022___18_17__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_14_11_2022___19_37__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_14_11_2022___19_37__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_11_2022___23_11__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_11_2022___23_11__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_11_2022___23_11__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_11_2022___23_11__Changes_1.xml" afterDir="false" />
+    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="implements RentAble">
+      <change afterPath="$PROJECT_DIR$/Test/TestAskForPayingTheBankAndGetFree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/TestGetResultFromDices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GiveMoneyblе.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RentAblе.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PositionChanceCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionChanceCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PositionForBuilding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionForBuilding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,18 +73,21 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestGetRandom">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Monopoly_2_2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TestAskForPayingTheBankAndGetFree.askForPayingTheBankAndGetFree">
     <configuration name="All in Monopoly_2_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Monopoly_2_2" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAskForPayingTheBankAndGetFree.askForPayingTheBankAndGetFree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Monopoly_2_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestAskForPayingTheBankAndGetFree" />
+      <option name="METHOD_NAME" value="askForPayingTheBankAndGetFree" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,21 +101,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestGetRandom.testSeeTheChanceCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestGetResultFromDices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Monopoly_2_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestGetRandom" />
-      <option name="METHOD_NAME" value="testSeeTheChanceCard" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="TestGetResultFromDices" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestGetRandom.testSeeTheCommunityChestCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestGetResultFromDices.testGetResultFromDices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Monopoly_2_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestGetRandom" />
-      <option name="METHOD_NAME" value="testSeeTheCommunityChestCard" />
+      <option name="MAIN_CLASS_NAME" value="TestGetResultFromDices" />
+      <option name="METHOD_NAME" value="testGetResultFromDices" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestGetRandom" />
+        <item itemvalue="JUnit.TestAskForPayingTheBankAndGetFree.askForPayingTheBankAndGetFree" />
         <item itemvalue="JUnit.All in Monopoly_2_2" />
-        <item itemvalue="JUnit.TestGetRandom.testSeeTheChanceCard" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.TestGetRandom.testSeeTheCommunityChestCard" />
+        <item itemvalue="JUnit.TestGetResultFromDices.testGetResultFromDices" />
+        <item itemvalue="JUnit.TestGetResultFromDices" />
+        <item itemvalue="JUnit.TestGetRandom" />
       </list>
     </recent_temporary>
   </component>
@@ -297,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669075414678</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="implements RentAble">
+      <created>1669143769190</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1669143769191</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -332,12 +335,15 @@
     <MESSAGE value="trying methods, the game is working but need to fix the methods from PositionForBuilding" />
     <MESSAGE value="optimised card positions and made tests with them" />
     <MESSAGE value="working on buying a place and paying rent" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on buying a place and paying rent" />
+    <MESSAGE value="implements RentAble" />
+    <option name="LAST_COMMIT_MESSAGE" value="implements RentAble" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$TestGetRandom_testGetRandomFrom0to6WhenPositionChangeCard.ic" NAME="TestGetRandom.testGetRandomFrom0to6WhenPositionChangeCard Coverage Results" MODIFIED="1668971269302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$All_in_Monopoly_2_2.ic" NAME="All in Monopoly_2_2 Coverage Results" MODIFIED="1669145801054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$TestGetRandom_testSeeTheCommunityChestCard.ic" NAME="TestGetRandom.testSeeTheCommunityChestCard Coverage Results" MODIFIED="1669070256616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$TestGetRandom_testGetRandomFrom0to6WhenPositionsCards.ic" NAME="TestGetRandom.testGetRandomFrom0to6WhenPositionsCards Coverage Results" MODIFIED="1669069535473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$TestGetResultFromDices.ic" NAME="TestGetResultFromDices Coverage Results" MODIFIED="1669145640738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$TestGetRandom.ic" NAME="TestGetRandom Coverage Results" MODIFIED="1669050734031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

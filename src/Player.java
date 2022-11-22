@@ -95,7 +95,7 @@ public class Player implements MoveOnBoardable {
     public int getRandomNumberFromMinToMax( int minNumber, int maxNumber){
         return (int) Math.floor(Math.random() * (maxNumber+1) + minNumber);
     }
-    private int getResultFromDices() {//test result>=2 && result<=12
+    protected int getResultFromDices() {//test result>=2 && result<=12
         int sum = 0;
         sum += getRandomNumberFromMinToMax(1,6);
         sum += getRandomNumberFromMinToMax(1,6);
