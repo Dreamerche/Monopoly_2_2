@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="optimised card positions and made tests with them">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PositionForBuilding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionForBuilding.java" afterDir="false" />
+    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="working on buying a place and paying rent">
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669071823602</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="working on buying a place and paying rent">
+      <created>1669075064308</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1669075064308</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,7 +314,8 @@
     <MESSAGE value="testGetRandom.." />
     <MESSAGE value="trying methods, the game is working but need to fix the methods from PositionForBuilding" />
     <MESSAGE value="optimised card positions and made tests with them" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimised card positions and made tests with them" />
+    <MESSAGE value="working on buying a place and paying rent" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on buying a place and paying rent" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$TestGetRandom.ic" NAME="TestGetRandom Coverage Results" MODIFIED="1669071302020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

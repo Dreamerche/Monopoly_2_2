@@ -64,14 +64,10 @@ public class Main {
     }//Main
 
     public static void showAllThePropertiesPfThePlayers(List<Player>players,List<Position>positions) {
-
-        List<Player> ownersOfPositions
-    for (int i = 0; i < pPAM[0].length; i++) {
-            int sum = 0;
-            for (int j = 0; j < pWCBBO[0].length; j++) {
-                if (i == pWCBBO[1][j]) {
-                    sum++;
-                }
+        List<Integer> ownersOfPositions=new ArrayList<>();
+        for (int i = 0; i < 40; i++) {
+            if((i+1)==positionsWithPlacesForBuilding){
+                ownersOfPositions.add(positions.get(i+1))
             }
             if (sum != 0) {
                 System.out.print(pPAM[0][i] + "'s property:\nPlace's position: | ");
