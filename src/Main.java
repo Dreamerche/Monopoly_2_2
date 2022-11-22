@@ -64,7 +64,7 @@ public class Main {
     }//Main
 
     public static void showAllThePropertiesPfThePlayers(List<Player>players,List<Position>positions) {
-        List<Integer> ownersOfPositions=new ArrayList<>();
+   /*     List<Integer> ownersOfPositions=new ArrayList<>();
         for (int i = 0; i < 40; i++) {
             if((i+1)==positionsWithPlacesForBuilding){
                 ownersOfPositions.add(positions.get(i+1))
@@ -93,7 +93,7 @@ public class Main {
         }
         System.out.println();
     }
-    //Main
+    */}
     public static void putPlayersAtStart(List<Player> players){
         letsPickNicknames();
         for (int i = 0; i < playersCount; i++) {

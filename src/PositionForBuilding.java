@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Scanner;
 
-public class PositionForBuilding extends Position {
+public class PositionForBuilding extends Position implements RentAblе {
     private static final int buyAPosition = 300;
     private static final int buyAHouse = 150;
     private static final int buyAHotel = 100;
@@ -24,7 +24,8 @@ public class PositionForBuilding extends Position {
         }
         System.out.println("Working on this method");
     }
-    protected String payTheOwner(List<Player> players,int i){
+    @Override
+    public String payTheOwner(List<Player> players,int i){
         int sum=rentAPosition+(rentAHouse*amountOfHouses)+(rentAHotel*amountOfHotels);
         players.get(owner).setCash(players.get(owner).getCash()+sum);
         players.get(i).setCash(players.get(i).getCash()-sum);

@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Scanner;
 
-public class PositionChanceCard extends PositionsPuttingPlayerInPrison{
+public class PositionChanceCard extends PositionsPuttingPlayerInPrison {
 
     public PositionChanceCard(int numberPosition) {
         super(numberPosition);
@@ -13,20 +13,22 @@ public class PositionChanceCard extends PositionsPuttingPlayerInPrison{
     }
 
     @Override
-    public void seeWhatThePositionOffersOrTakes(List<Player>players,int i,List<Position>positions){
-        String isTheCardPuttingInJail=seeTheChanceCard(players,i);
-        if(isTheCardPuttingInJail.equalsIgnoreCase("third scenario")){
+    public void seeWhatThePositionOffersOrTakes(List<Player> players, int i, List<Position> positions) {
+        String isTheCardPuttingInJail = seeTheChanceCard(players, i);
+        if (isTheCardPuttingInJail.equalsIgnoreCase("third scenario")) {
             System.out.println(super.askForPayingTheBankAndGetFree(players, i));
         }
     }
+
     protected String seeTheChanceCard(List<Player> players, int i) {//we couldn't think of another way to make a void better for testing
-        int number = players.get(i).getRandomNumberFromMinToMax(0,6);
+        int number = players.get(i).getRandomNumberFromMinToMax(0, 6);
         System.out.print(players.get(i).getName() + ", your chance card ");
         if (number <= 3) {
             int sum = (number + 1) * 50;
             System.out.println("gives you " + sum + " money!\n");
             players.get(i).setCash(players.get(i).getCash() + sum);
             return "first scenario";
+
         } else if (number <= 5) {
             int sum = 100;
             System.out.println("gets from you " + sum + " money and gives them to the bank!\n");
