@@ -12,7 +12,7 @@ public class TestAskForPayingTheBankAndGetFree {
         players1.add(new Player("Gosho"));
 
         players1.get(1).setCash(49.99);
-        String option=askForPayingTheBankAndGetFree (players1,0);
+        //String option=askForPayingTheBankAndGetFree (players1,0);
 
     }
 }
