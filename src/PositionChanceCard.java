@@ -16,7 +16,7 @@ public class PositionChanceCard extends PositionsPuttingPlayerInPrison {
     public void seeWhatThePositionOffersOrTakes(List<Player> players, int i, List<Position> positions) {
         String isTheCardPuttingInJail = seeTheChanceCard(players, i);
         if (isTheCardPuttingInJail.equalsIgnoreCase("third scenario")) {
-            System.out.println(super.askForPayingTheBankAndGetFree(players, i));
+            super.askForPayingTheBankAndGetFree(players, i);
         }
     }
 

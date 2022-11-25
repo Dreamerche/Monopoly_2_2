@@ -4,6 +4,7 @@ public class PlayersProperty {
     public String getPlayersPropertyInformation(int i, List<PositionForBuilding> positionForBuildings){
         System.out.println("Positions:"+showPositionsOfAPlayer(i,positionForBuildings));
         System.out.println("Houses:   "+showHousesOfThePlayersPositions(i,positionForBuildings));
+        System.out.println("Hotels:   "+showHotelsOfThePlayersPositions(i,positionForBuildings));
         System.out.println();
         return "All information is shown";
     }
