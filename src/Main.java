@@ -1,4 +1,6 @@
 import java.util.*;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 public class Main {
     static int playersCount=0;
@@ -40,8 +42,8 @@ public class Main {
         //lists with the indexes, when playing, we typically chose the first position to be position 1, but in the programming
         //the first element in the list positions has index 0, that's why in the for we check if (i+1)=40
         List<Integer> positionsWithPlacesForBuilding = Arrays.asList(2, 4, 7, 9, 10, 12, 14, 15, 17, 19, 20, 22, 24, 25, 27, 28, 30, 32, 33, 35, 38, 40);//positions
-        List<Integer> chancePositions=Arrays.asList(8,23,37);//0-3: receive 50,100,150,200 money, 4-5: give 100 to the bank, 6:go to jail
-        List<Integer> communityPositions=Arrays.asList(3,18,34);//0-2: receive 50,100,150 money, 3-5: give 100 money, 6: go to jailint[] positionsWithChanceCards={};
+        List<Integer> chancePositions=Arrays.asList(8,23,37);
+        List<Integer> communityPositions=Arrays.asList(3,18,34);
         List<Integer> jailPositions=Arrays.asList(11,31);
         for (int i = 0; i < 40; i++) {//1
             if(positionsWithPlacesForBuilding.contains(i+1))
@@ -74,39 +76,6 @@ public class Main {
             }
         }
     }
-    /*int[] pFC = pricesForColumn(pWCBBO[0].length);
-        System.out.print("\nPlace's position: | ");
-        int br = 0;//saves indexes and helps to sum
-        for (int j = 0; j < pWCBBO[0].length; j++) {
-            if (i == pWCBBO[1][j]) {
-                System.out.print(pWCBBO[0][j] + " | ");
-                pFC[br] = pFC[br] + prices[2][0];
-                br++;
-            }
-        }
-        br = 0;
-        System.out.print("\nHouses there:     | ");
-        for (int j = 0; j < pWCBBO[0].length; j++) {
-            if (i == pWCBBO[1][j]) {
-                System.out.print(pWCBBO[2][j] + " | ");
-                pFC[br] += pFC[br] + (prices[2][1] * pWCBBO[2][j]);
-                br++;
-            }
-        }
-        br = 0;
-        System.out.print("\nHotels there:     | ");
-        for (int j = 0; j < pWCBBO[0].length; j++) {
-            if (i == pWCBBO[1][j]) {
-                System.out.print(pWCBBO[3][j] + " | ");
-                pFC[br] = pFC[br] + (prices[2][2] * pWCBBO[3][j]);
-                br++;
-            }
-        }
-        System.out.print("\nPrice you'll get: ");
-        for (int j = 0; j < br; j++) {
-            System.out.print(pFC[j] + " | ");
-        }
-        System.out.println();*/
     public static boolean checkIfThePlayerHasAnyProperty(int i, List<PositionForBuilding> currentPositionsForBuilding){
         for (PositionForBuilding position:currentPositionsForBuilding) {
             if(position.getOwner()==i){
@@ -136,6 +105,12 @@ public class Main {
                     if(!players.get(i).isBeingInJail()){
                     players.get(i).setTheNewPosition(players,i);
                     positions.get(players.get(i).getCurrentPosition()-1).seeWhatThePositionOffersOrTakes(players,i,positions);
+                    }
+                    if(players.get(i).isHasBankrupted() && !players.get(i).isHasLostAllTheirProperty()){
+                        CurrentPositionsForBuilding currentPositionsForBuilding=new CurrentPositionsForBuilding();
+                        List<PositionForBuilding> positionsWithOwners=currentPositionsForBuilding.getPositionsForBuildingWithOwners(players,positions);
+                        players.get(i).loseAllProperty(i,positionsWithOwners);
+                        br--;
                     }
                     showThePlayersPositionAndMoney(players);
                     showAllThePropertiesOfThePlayers(players,positions);

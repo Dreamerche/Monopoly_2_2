@@ -1,7 +1,6 @@
-import java.lang.management.PlatformLoggingMXBean;
 import java.util.List;
 
-public class Position implements PLayable {
+public class Position implements Playable {
     protected int numberPosition;
 
     public Position(int numberPosition) {

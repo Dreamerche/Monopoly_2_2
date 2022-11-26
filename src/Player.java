@@ -7,6 +7,7 @@ public class Player implements MoveOnBoardable {
     private int currentPosition;
     private boolean beingInJail;
     private boolean hasBankrupted;
+    private boolean hasLostAllTheirProperty;
 
     @Override
     public String toString() {
@@ -16,15 +17,17 @@ public class Player implements MoveOnBoardable {
                 ", currentPosition=" + currentPosition +
                 ", beingInJail=" + beingInJail +
                 ", hasBankrupted=" + hasBankrupted +
+                ", hasLostAllTheirProperty"+hasLostAllTheirProperty+
                 '}';
     }
 
     public Player(String name) {
         this.name = name;
-        this.cash = 1500;
+        this.cash = 50;
         this.currentPosition = 1;
         this.beingInJail = false;
         this.hasBankrupted = false;
+        this.hasLostAllTheirProperty=false;
     }
 
     public String getName() {
@@ -67,6 +70,14 @@ public class Player implements MoveOnBoardable {
         this.hasBankrupted = hasBankrupted;
     }
 
+    public boolean isHasLostAllTheirProperty() {
+        return hasLostAllTheirProperty;
+    }
+
+    public void setHasLostAllTheirProperty(boolean hasLostAllTheirProperty) {
+        this.hasLostAllTheirProperty = hasLostAllTheirProperty;
+    }
+
     @Override
     public void setTheNewPosition(List<Player> players, int i) {
         throwTheDices();
@@ -93,13 +104,21 @@ public class Player implements MoveOnBoardable {
         }
     }
     public int getRandomNumberFromMinToMax( int minNumber, int maxNumber){
-        return (int) Math.floor(Math.random() * (maxNumber+1) + minNumber);
+        return (int) Math.floor(Math.random() * (maxNumber-minNumber+1) + minNumber);
     }
-    protected int getResultFromDices() {//test result>=2 && result<=12
+    protected int getResultFromDices() {
         int sum = 0;
         sum += getRandomNumberFromMinToMax(1,6);
         sum += getRandomNumberFromMinToMax(1,6);
         return sum;
     }
 
+    public void loseAllProperty(int i, List<PositionForBuilding> positionsWithOwners) {
+        for (PositionForBuilding position:positionsWithOwners) {
+            if(position.getOwner()==i){
+                position.setOwner(-1);
+            }
+        }
+        setHasLostAllTheirProperty(true);
+    }
 }

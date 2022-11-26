@@ -9,10 +9,9 @@ public class TestGetResultFromDices {//method needs to be fixed
         Player player= new Player("Pesho");
 
         for (int i = 0; i < 100; i++) {
-
+            int result= player.getResultFromDices();
             Assert.assertTrue("Method doesn't return expected value",
-                    player.getResultFromDices()>=2 && player.getResultFromDices()<=12);
-
+                    result>=2 && result<=12);
         }
     }
 

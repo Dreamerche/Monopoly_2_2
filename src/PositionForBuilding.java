@@ -21,12 +21,13 @@ public class PositionForBuilding extends Position implements RentAblе {
                 System.out.println(buyThePlace(players, i));
             }
         } else if (getOwner() == i) {
+            if (amountOfHotels == 0 && players.get(i).getCash() >= buyAHotel && getAmountOfHouses()==4 && askForBuyingAHotel(players, i)) {
+            System.out.println(buildHotelOnPosition(players, i));
+            }
             if (amountOfHouses < 4 && players.get(i).getCash() >= buyAHouse && askForBuyingAHouse(players, i)) {
                 System.out.println(buildHouseOnPosition(players, i));
             }
-            if (amountOfHotels == 0 && players.get(i).getCash() >= buyAHotel && askForBuyingAHotel(players, i)) {
-                System.out.println(buildHotelOnPosition(players, i));
-            }
+
         } else {
             System.out.println(payTheOwner(players, i));
         }

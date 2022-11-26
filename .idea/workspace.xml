@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="all methods working, need more tests">
+    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="method for throwing dices should be fixed">
+      <change afterPath="$PROJECT_DIR$/src/ReportInDocument.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlayersProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayersProperty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PositionCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/TestGetResultFromDices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestGetResultFromDices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PLayable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PositionChanceCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionChanceCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PositionPrison.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionPrison.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PositionCommunityChestCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionCommunityChestCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PositionForBuilding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionForBuilding.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +78,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestGetResultFromDices">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Monopoly_2_2" />
@@ -120,8 +125,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestGetResultFromDices" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TestGetResultFromDices" />
         <item itemvalue="JUnit.TestAskForPayingTheBankAndGetFree.askForPayingTheBankAndGetFree" />
         <item itemvalue="JUnit.All in Monopoly_2_2" />
         <item itemvalue="JUnit.TestGetResultFromDices.testGetResultFromDices" />
@@ -312,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669321491944</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="method for throwing dices should be fixed">
+      <created>1669375243729</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1669375243729</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -350,7 +362,8 @@
     <MESSAGE value="implements RentAble" />
     <MESSAGE value="many changes" />
     <MESSAGE value="all methods working, need more tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="all methods working, need more tests" />
+    <MESSAGE value="method for throwing dices should be fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="method for throwing dices should be fixed" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$TestGetRandom.ic" NAME="TestGetRandom Coverage Results" MODIFIED="1669071302020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

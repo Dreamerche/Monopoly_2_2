@@ -23,7 +23,7 @@ public class PositionCommunityChestCard extends PositionsPuttingPlayerInPrison{
     protected String seeTheCommunityChestCard(List<Player> players, int i) {
         int number = players.get(i).getRandomNumberFromMinToMax(0,6);
         System.out.print(players.get(i).getName() + ", your community chest card ");
-        if (number <= 2) {
+        if (number <= 2) {//0-2: receive 50,100,150 money, 3-5: give 100 money, 6: go to jail
             int sum = (number + 1) * 50;
             System.out.println("gives you " + sum + " money!\n");
             players.get(i).setCash(players.get(i).getCash() + sum);
