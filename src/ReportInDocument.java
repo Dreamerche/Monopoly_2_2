@@ -7,9 +7,6 @@ import java.util.Scanner;
 public class ReportInDocument {
 
     public void getTheGameResult(List<Player> players) throws IOException {
-        File file=new File("playedGames.txt");
-        Scanner inputStream = new Scanner(file, "utf-8");
-        inputStream.close();
         String theWinner=getTheWinnerInfo(players);
         String allPlayers=getNamesOfPlayersInfo(players);
         DateTimeFormatter dtf;

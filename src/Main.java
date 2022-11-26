@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.*;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
@@ -5,8 +8,18 @@ import java.time.format.DateTimeFormatter;
 public class Main {
     static int playersCount=0;
     static List<String> nicknames=new ArrayList<>();
-    public static void main(String[] args) {
-    letsPlayMonopoly();
+    public static void main(String[] args) throws IOException {
+        File file = new File("playedGames.txt");
+        file.createNewFile();
+        Scanner inputStream = new Scanner(file, "utf-8");
+        int lineNumber = 0;
+        while (inputStream.hasNextLine()) {
+            lineNumber++;
+            System.out.println("Line" + lineNumber + ":" + inputStream.nextLine());
+        }
+        inputStream.close();
+
+        letsPlayMonopoly();
 }
     public static void letsPlayMonopoly() {//to add try-catch
         while (true) {
