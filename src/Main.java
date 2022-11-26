@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.*;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
@@ -18,6 +19,14 @@ public class Main {
             System.out.println("Line" + lineNumber + ":" + inputStream.nextLine());
         }
         inputStream.close();
+        try {
+            PrintStream ps = new PrintStream("playedGames.txt");
+            ps.println();
+            ps.close();
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
 
         letsPlayMonopoly();
 }
