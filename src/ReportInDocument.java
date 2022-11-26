@@ -2,21 +2,24 @@ import java.io.*;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Scanner;
 
 public class ReportInDocument {
 
     public void getTheGameResult(List<Player> players) throws IOException {
+        File file=new File("playedGames.txt");
+        Scanner inputStream = new Scanner(file, "utf-8");
+        inputStream.close();
         String theWinner=getTheWinnerInfo(players);
         String allPlayers=getNamesOfPlayersInfo(players);
         DateTimeFormatter dtf;
         LocalDateTime currentDateTime= LocalDateTime.of(LocalDate.now(),LocalTime.now());
         dtf=DateTimeFormatter.ofPattern("HH:mm d-MM-yy");
         String previousInfoFromFile=readFile("playedGames.txt");
-        saveTheNewGameData("playedGames.txt",previousInfoFromFile,theWinner,allPlayers,dtf,currentDateTime);
-
+        saveTheNewGameData(previousInfoFromFile,theWinner,allPlayers,dtf,currentDateTime);
     }
-    protected void saveTheNewGameData(String fileName,String previousInfoFromFile,String theWinner,String allPlayers, DateTimeFormatter dtf,LocalDateTime currentDateTime) throws FileNotFoundException {
-        PrintStream fileWriter = new PrintStream(fileName);
+    protected void saveTheNewGameData(String previousInfoFromFile,String theWinner,String allPlayers, DateTimeFormatter dtf,LocalDateTime currentDateTime) throws FileNotFoundException {
+        PrintStream fileWriter = new PrintStream("playedGames.txt");
         fileWriter.print(previousInfoFromFile);
         fileWriter.println(theWinner);
         fileWriter.println(allPlayers);

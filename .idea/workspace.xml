@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="method for throwing dices should be fixed">
-      <change afterPath="$PROJECT_DIR$/src/ReportInDocument.java" afterDir="false" />
+    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="working with file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestGetResultFromDices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestGetResultFromDices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PLayable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PositionChanceCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionChanceCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PositionCommunityChestCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionCommunityChestCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PositionForBuilding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionForBuilding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReportInDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReportInDocument.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669375243729</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="working with file">
+      <created>1669485829946</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1669485829946</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -363,7 +362,8 @@
     <MESSAGE value="many changes" />
     <MESSAGE value="all methods working, need more tests" />
     <MESSAGE value="method for throwing dices should be fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="method for throwing dices should be fixed" />
+    <MESSAGE value="working with file" />
+    <option name="LAST_COMMIT_MESSAGE" value="working with file" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$TestGetRandom.ic" NAME="TestGetRandom Coverage Results" MODIFIED="1669071302020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
