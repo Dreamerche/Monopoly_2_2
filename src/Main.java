@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.Scanner;
 import java.util.*;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
@@ -10,24 +11,6 @@ public class Main {
     static int playersCount=0;
     static List<String> nicknames=new ArrayList<>();
     public static void main(String[] args) throws IOException {
-        File file = new File("playedGames.txt");
-        file.createNewFile();
-        Scanner inputStream = new Scanner(file, "utf-8");
-        int lineNumber = 0;
-        while (inputStream.hasNextLine()) {
-            lineNumber++;
-            System.out.println("Line" + lineNumber + ":" + inputStream.nextLine());
-        }
-        inputStream.close();
-        try {
-            PrintStream ps = new PrintStream("playedGames.txt");
-            ps.println();
-            ps.close();
-
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-
         letsPlayMonopoly();
 }
     public static void letsPlayMonopoly() {//to add try-catch
@@ -147,6 +130,9 @@ public class Main {
                 System.out.println("The winner is " + players.get(i).getName() + "!");
             }
         }
+        ReportInDocument reportInDocument=new ReportInDocument();
+        //reportInDocument.getTheGameResult(players);
+
     }//Main
     public static void letsPickNicknames() {
         Scanner scan = new Scanner(System.in);

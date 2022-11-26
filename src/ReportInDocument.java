@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ReportInDocument {
-
     public void getTheGameResult(List<Player> players) throws IOException {
         String theWinner=getTheWinnerInfo(players);
         String allPlayers=getNamesOfPlayersInfo(players);
@@ -24,7 +23,8 @@ public class ReportInDocument {
         fileWriter.close();
     }
     private String readFile(String fileName) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(fileName));
+        File file=new File(fileName);
+        BufferedReader reader = new BufferedReader(new FileReader(file.getName()));
         String line = "";
         StringBuilder stringBuilder = new StringBuilder();
         try {
