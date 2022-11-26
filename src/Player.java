@@ -23,7 +23,7 @@ public class Player implements MoveOnBoardable {
 
     public Player(String name) {
         this.name = name;
-        this.cash = 1500;
+        this.cash = 0;
         this.currentPosition = 1;
         this.beingInJail = false;
         this.hasBankrupted = false;

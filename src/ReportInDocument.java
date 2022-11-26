@@ -1,8 +1,9 @@
 import java.io.*;
-import java.time.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.Scanner;
 
 public class ReportInDocument {
     public void getTheGameResult(List<Player> players) throws IOException {
@@ -11,25 +12,27 @@ public class ReportInDocument {
         DateTimeFormatter dtf;
         LocalDateTime currentDateTime= LocalDateTime.of(LocalDate.now(),LocalTime.now());
         dtf=DateTimeFormatter.ofPattern("HH:mm d-MM-yy");
-        String previousInfoFromFile=readFile("playedGames.txt");
-        saveTheNewGameData(previousInfoFromFile,theWinner,allPlayers,dtf,currentDateTime);
+        saveTheNewGameData(theWinner,allPlayers,dtf,currentDateTime);
     }
-    protected void saveTheNewGameData(String previousInfoFromFile,String theWinner,String allPlayers, DateTimeFormatter dtf,LocalDateTime currentDateTime) throws FileNotFoundException {
+    protected void saveTheNewGameData(String theWinner,String allPlayers, DateTimeFormatter dtf,LocalDateTime currentDateTime) throws IOException {
+        String previousInfoFromFile=readFile("playedGames.txt");
         PrintStream fileWriter = new PrintStream("playedGames.txt");
-        fileWriter.print(previousInfoFromFile);
+        fileWriter.println(previousInfoFromFile);
         fileWriter.println(theWinner);
         fileWriter.println(allPlayers);
-        fileWriter.println(dtf.format(currentDateTime)+"\n");
+        fileWriter.println(dtf.format(currentDateTime)+"\n\n");
         fileWriter.close();
     }
-    private String readFile(String fileName) throws IOException {
+    protected String readFile(String fileName) throws IOException {
         File file=new File(fileName);
+        file.createNewFile();
         BufferedReader reader = new BufferedReader(new FileReader(file.getName()));
         String line = "";
         StringBuilder stringBuilder = new StringBuilder();
         try {
             while ((line = reader.readLine()) != null) {
                 stringBuilder.append(line);
+                stringBuilder.append("\n");
             }
             return stringBuilder.toString();
         } finally {
@@ -42,7 +45,7 @@ public class ReportInDocument {
         for (int i = 0; i < players.size()-1; i++) {
             allPlayers+=(players.get(i).getName()+", ");
         }
-        allPlayers+=players.get(players.size()-1);
+        allPlayers+=players.get(players.size()-1).getName();
         return allPlayers;//using this in unit tests
     }
     protected String getTheWinnerInfo(List<Player>players){

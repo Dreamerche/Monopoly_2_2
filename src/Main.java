@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         letsPlayMonopoly();
 }
-    public static void letsPlayMonopoly() {//to add try-catch
+    public static void letsPlayMonopoly() throws IOException {//to add try-catch
         while (true) {
             Scanner scan = new Scanner(System.in);
             System.out.print("Enter the number of players[2;4]: ");
@@ -95,7 +95,7 @@ public class Main {
             players.add(new Player(nicknames.get(i)));
         }
     }
-    public static void startTheGame() {
+    public static void startTheGame() throws IOException {
         List<Player> players=new ArrayList<Player>();
         putPlayersAtStart(players);
         ArrayList<Position> positions=new ArrayList<Position>(40);//ListOfPositions
@@ -124,14 +124,14 @@ public class Main {
         }
         showTheWinner(players);
     }//Main
-    public static void showTheWinner(List<Player> players) {
+    public static void showTheWinner(List<Player> players) throws IOException {
         for (int i = 0; i < playersCount; i++) {
             if (!players.get(i).isHasBankrupted()) {
                 System.out.println("The winner is " + players.get(i).getName() + "!");
             }
         }
         ReportInDocument reportInDocument=new ReportInDocument();
-        //reportInDocument.getTheGameResult(players);
+        reportInDocument.getTheGameResult(players);
 
     }//Main
     public static void letsPickNicknames() {
