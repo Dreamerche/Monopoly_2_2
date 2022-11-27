@@ -21,10 +21,11 @@ public class TestBuildingOnPosition {
         players.add(new Player("Gosho"));
         PositionForBuilding positionForBuilding = new PositionForBuilding(7);
         int oldCash= (int) players.get(1).getCash();
+        int priceHouse= positionForBuilding.getBuyAHouse();
         positionForBuilding.buildHouseOnPosition(players,1);
         int newCash= (int) players.get(1).getCash();
 
-        Assert.assertTrue("Method doesn't return expected value",(oldCash>newCash));
+        Assert.assertTrue("Method doesn't return expected value",(oldCash==newCash+priceHouse));
 
     }
     @Test
@@ -34,7 +35,6 @@ public class TestBuildingOnPosition {
         players.add(new Player("Gosho"));
         PositionForBuilding positionForBuilding = new PositionForBuilding(7);
         Assert.assertEquals("Pesho bought a hotel.", positionForBuilding.buildHotelOnPosition(players, 0));
-
     }
     @Test
     public void testBuildHotelOnPositionCheckIfCashChange() {
@@ -44,10 +44,10 @@ public class TestBuildingOnPosition {
         players.add(new Player("Gosho"));
         PositionForBuilding positionForBuilding = new PositionForBuilding(7);
         int oldCash= (int) players.get(1).getCash();
+        int priceHotel=positionForBuilding.getBuyAHotel();
         positionForBuilding.buildHotelOnPosition(players,1);
         int newCash= (int) players.get(1).getCash();
-
-        Assert.assertTrue("Method doesn't return expected value",(oldCash>newCash));
+        Assert.assertTrue("Method doesn't return expected value",(oldCash==newCash+priceHotel));
 
     }
 

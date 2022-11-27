@@ -2,16 +2,34 @@ import java.util.List;
 import java.util.Scanner;
 
 public class PositionForBuilding extends Position implements RentAblе {
-    private static final int buyAPosition = 300;
-    private static final int buyAHouse = 150;
-    private static final int buyAHotel = 100;
+    protected static final int buyAPosition = 300;
+    protected static final int buyAHouse = 150;
+    protected static final int buyAHotel = 100;
 
-    private static final int rentAPosition = 200;
-    private static final int rentAHouse = 100;
-    private static final int rentAHotel = 50;
-    private int owner;
-    private int amountOfHouses;
-    private int amountOfHotels;
+    protected static final int rentAPosition = 200;
+    protected static final int rentAHouse = 100;
+    protected static final int rentAHotel = 50;
+    protected int owner;
+    protected int amountOfHouses;
+    protected int amountOfHotels;
+    protected int getBuyAPosition(){
+        return buyAPosition;
+    }
+        protected int getBuyAHouse(){
+        return buyAHouse;
+    }
+    protected int getBuyAHotel(){
+        return buyAHotel;
+    }
+    protected int getRentAPosition(){
+        return rentAPosition;
+    }
+    protected int getRentAHouse(){
+        return rentAHouse;
+    }
+    protected int getRentAHotel(){
+        return rentAHotel;
+    }
 
     @Override
     public void seeWhatThePositionOffersOrTakes(List<Player> players, int i, List<Position> positions) {
