@@ -19,20 +19,22 @@ public class PositionPrison extends PositionsPuttingPlayerInPrison implements Ou
             super.askForPayingTheBankAndGetFree(players,i);
         }
         else {
-            System.out.println(throwTheDicesToGetOutOfJail(players, i));
+            players.get(i).throwTheDices(new Scanner(System.in));
+            throwTheDicesToGetOutOfJail(players, i);
         }
     }
     @Override
     public String throwTheDicesToGetOutOfJail(List<Player> players, int i) {
-        players.get(i).throwTheDices();
         int firstNum = players.get(i).getRandomNumberFromMinToMax(1,6);
         int secondNum = players.get(i).getRandomNumberFromMinToMax(1,6);
         if (firstNum == secondNum) {
             players.get(i).setBeingInJail(false);
-            return ("Lucky you! You got " + firstNum + "-" + secondNum + " from the dices and you're free!\n" +
+            System.out.println("Lucky you! You got " + firstNum + "-" + secondNum + " from the dices and you're free!\n" +
                     "Now throw the dices to get to your new position!");
+            return (players.get(i).getName()+" is free");
         } else {
-            return ("You got " + firstNum + "-" + secondNum + " from the dices and you aren't free!\n");
+            System.out.println("You got " + firstNum + "-" + secondNum + " from the dices and you aren't free!\n");
+            return (players.get(i).getName()+" isn't free");
         }
     }
 

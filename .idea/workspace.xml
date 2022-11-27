@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="YAY, found a way to check input in unit testing">
+    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="askForPayingTheBankAndGetFree">
+      <change afterPath="$PROJECT_DIR$/Test/TestThrowingDices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestAskForPayingTheBankAndGetFree1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestAskForPayingTheBankAndGetFree1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/TestBuying.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestBuying.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/TestGetResultFromDices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PositionForBuilding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionForBuilding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PositionPrison.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionPrison.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,19 +96,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestBuildingOnPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestBuying" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Monopoly_2_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestBuildingOnPosition" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestBuyPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Monopoly_2_2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestBuyPosition" />
+      <option name="MAIN_CLASS_NAME" value="TestBuying" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,13 +114,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestThrowingDices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Monopoly_2_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestThrowingDices" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in Monopoly_2_2" />
+        <item itemvalue="JUnit.TestThrowingDices" />
+        <item itemvalue="JUnit.TestBuying" />
         <item itemvalue="JUnit.TestAskForPayingTheBankAndGetFree1" />
         <item itemvalue="JUnit.TestPayTheOwner" />
-        <item itemvalue="JUnit.TestBuyPosition" />
-        <item itemvalue="JUnit.TestBuildingOnPosition" />
       </list>
     </recent_temporary>
   </component>
@@ -368,7 +373,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669528709294</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="askForPayingTheBankAndGetFree">
+      <created>1669529524480</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1669529524480</updated>
+    </task>
+    <task id="LOCAL-00035" summary="askForPayingTheBankAndGetFree">
+      <created>1669529616944</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1669529616944</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -383,7 +402,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="classPositionForBulding" />
     <MESSAGE value="classPositionForBuilding-newConstructor,Getterts, Setters." />
     <MESSAGE value="classPositionCommunityChastCard" />
     <MESSAGE value="metods-getRandom" />
@@ -408,14 +426,15 @@
     <MESSAGE value="working with file" />
     <MESSAGE value="file work done" />
     <MESSAGE value="YAY, found a way to check input in unit testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="YAY, found a way to check input in unit testing" />
+    <MESSAGE value="askForPayingTheBankAndGetFree" />
+    <option name="LAST_COMMIT_MESSAGE" value="askForPayingTheBankAndGetFree" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$TestGetRandom.ic" NAME="TestGetRandom Coverage Results" MODIFIED="1669071302020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$TestGetRandom_testGetRandomFrom0to6WhenPositionChangeCard.ic" NAME="TestGetRandom.testGetRandomFrom0to6WhenPositionChangeCard Coverage Results" MODIFIED="1668971269302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$TestGetRandom_testGetRandomFrom0to6WhenPositionsCards.ic" NAME="TestGetRandom.testGetRandomFrom0to6WhenPositionsCards Coverage Results" MODIFIED="1669069535473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$TestGetResultFromDices.ic" NAME="TestGetResultFromDices Coverage Results" MODIFIED="1669145640738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$All_in_Monopoly_2_2.ic" NAME="All in Monopoly_2_2 Coverage Results" MODIFIED="1669524387343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$All_in_Monopoly_2_2.ic" NAME="All in Monopoly_2_2 Coverage Results" MODIFIED="1669531395859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$TestBuildingOnPosition_testBuildHouseOnPositionCheckIfCashChange.ic" NAME="TestBuildingOnPosition.testBuildHouseOnPositionCheckIfCashChange Coverage Results" MODIFIED="1669493139269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$TestGetRandom_testSeeTheCommunityChestCard.ic" NAME="TestGetRandom.testSeeTheCommunityChestCard Coverage Results" MODIFIED="1669070256616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>

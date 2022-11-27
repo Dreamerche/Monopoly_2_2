@@ -35,14 +35,14 @@ public class PositionForBuilding extends Position implements RentAblе {
     public void seeWhatThePositionOffersOrTakes(List<Player> players, int i, List<Position> positions) {
         Scanner sc = new Scanner(System.in);
         if (isTheBankTheOwner()) {
-            if (askForBuyingThePlace(players, i)) {
+            if (askForBuyingThePlace(new Scanner(System.in),players, i)) {
                 System.out.println(buyThePlace(players, i));
             }
         } else if (getOwner() == i) {
-            if (amountOfHotels == 0 && players.get(i).getCash() >= buyAHotel && getAmountOfHouses()==4 && askForBuyingAHotel(players, i)) {
+            if (amountOfHotels == 0 && players.get(i).getCash() >= buyAHotel && getAmountOfHouses()==4 && askForBuyingAHotel(new Scanner(System.in),players, i)) {
             System.out.println(buildHotelOnPosition(players, i));
             }
-            if (amountOfHouses < 4 && players.get(i).getCash() >= buyAHouse && askForBuyingAHouse(players, i)) {
+            if (amountOfHouses < 4 && players.get(i).getCash() >= buyAHouse && askForBuyingAHouse(new Scanner(System.in),players, i)) {
                 System.out.println(buildHouseOnPosition(players, i));
             }
 
@@ -86,11 +86,10 @@ public class PositionForBuilding extends Position implements RentAblе {
         }
     }
 
-    public boolean askForBuyingAHouse(List<Player> players, int i) {
-        Scanner scan = new Scanner(System.in);
+    public boolean askForBuyingAHouse(Scanner scanner,List<Player> players, int i) {
         while (true) {
             System.out.print(players.get(i).getName() + ", do you want to buy a house on this position, " + getNumberPosition() + ", for " + buyAHouse + "? Type \"y\" for yes or \"n\" for no: ");
-            String answer = scan.nextLine();
+            String answer = scanner.nextLine();
             if (answer.equalsIgnoreCase("y")) {
                 return true;
             } else if (answer.equalsIgnoreCase("n")) {
@@ -101,11 +100,10 @@ public class PositionForBuilding extends Position implements RentAblе {
         }
     }
 
-    public boolean askForBuyingAHotel(List<Player> players, int i) {
-        Scanner sc = new Scanner(System.in);
+    public boolean askForBuyingAHotel(Scanner scanner,List<Player> players, int i) {
         while (true) {
             System.out.print(players.get(i).getName() + ", do you want to buy a hotel on this position, " + getNumberPosition() + ", for " + buyAHotel + "? Type \"y\" for yes or \"n\" for no: ");
-            String answer = sc.nextLine();
+            String answer = scanner.nextLine();
             if (answer.equalsIgnoreCase("y")) {
                 return true;
             } else if (answer.equalsIgnoreCase("n")) {
@@ -116,12 +114,11 @@ public class PositionForBuilding extends Position implements RentAblе {
         }
     }
 
-    public boolean askForBuyingThePlace(List<Player> players, int i) {
-        Scanner scan = new Scanner(System.in);
+    public boolean askForBuyingThePlace(Scanner scanner,List<Player> players, int i) {
         if (players.get(i).getCash() >= buyAPosition) {
             while (true) {
                 System.out.print(players.get(i).getName() + ", do you want to buy this position, " + getNumberPosition() + ", for " + buyAPosition + "? Type \"y\" for yes or \"n\" for no: ");
-                String answer = scan.nextLine();
+                String answer = scanner.nextLine();
                 if (answer.equalsIgnoreCase("y")) {
                     return true;
                 } else if (answer.equalsIgnoreCase("n")) {

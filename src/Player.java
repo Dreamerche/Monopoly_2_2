@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -80,7 +81,7 @@ public class Player implements MoveOnBoardable {
 
     @Override
     public void setTheNewPosition(List<Player> players, int i) {
-        throwTheDices();
+        throwTheDices(new Scanner(System.in));
         int score = getResultFromDices();
         System.out.println(getName() + " got score " + score + ".");
         setCurrentPosition(getCurrentPosition() + score);
@@ -92,14 +93,25 @@ public class Player implements MoveOnBoardable {
         }
         System.out.println("Now " + getName() + " is on position " + getCurrentPosition() + ".\n");
     }
+    public boolean offerToSellProperty(int i,List<Player>players,List<Position>positions){
+        CurrentPositionsForBuilding currentPositionsForBuilding=new CurrentPositionsForBuilding();
+        List<PositionForBuilding> positionsWithOwners=currentPositionsForBuilding.getPositionsForBuildingWithOwners(players,positions);
+    List<PositionForBuilding> playersPositions=new ArrayList<>();
+        for (PositionForBuilding position:positionsWithOwners) {
+            if(position.getOwner()==i){
+                playersPositions.add(position);
+            }
+        }
+        System.out.print("Your properties are on positions: ");
+        return true;
+    }
 
-    public void throwTheDices() {//test if you can
-        Scanner scan = new Scanner(System.in);
+    public String throwTheDices(Scanner scanner) {//test if you can
         System.out.print(getName() + ", throw the dices by typing \"t\": ");
         while (true) {
-            String typed = scan.nextLine();
+            String typed = scanner.nextLine();
             if (typed.equalsIgnoreCase("t")) {
-                break;
+                return ("dices were thrown");
             }
         }
     }
