@@ -51,6 +51,9 @@ public class PositionForBuilding extends Position implements RentAblе {
         }
         System.out.println();
     }
+    public int getPriceOfPropertyForSelling(){
+       return (buyAPosition + (buyAHouse * amountOfHouses) + (buyAHotel * amountOfHotels))/2;
+    }
 
     protected String buildHouseOnPosition(List<Player> players, int i) {
         setAmountOfHouses(getAmountOfHouses() + 1);

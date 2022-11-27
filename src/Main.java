@@ -33,16 +33,14 @@ public class Main {
                 System.out.println("Your input isn't correct!");
             }
         }
-    }//
-
+    }
     public static void showThePlayersPositionAndMoney(List<Player> players) {
         System.out.println("Player | Position | Money");
         for (int i = 0; i < playersCount; i++) {
             System.out.println(players.get(i).getName()+" | "+players.get(i).getCurrentPosition()+" | "+players.get(i).getCash());
         }
         System.out.println();
-    }//Main
-
+    }
     public static void setPositionsByDefault(List<Position> positions) {
         //lists with the indexes, when playing, we typically chose the first position to be position 1, but in the programming
         //the first element in the list positions has index 0, that's why in the for we check if (i+1)=40
@@ -68,8 +66,7 @@ public class Main {
                 positions.add(new Position(i+1));//if the position don't have anything special, it's just a position
             }
         }
-    }//Main
-
+    }
     public static void showAllThePropertiesOfThePlayers(List<Player>players,List<Position>positions) {
         CurrentPositionsForBuilding currentPositionsForBuilding=new CurrentPositionsForBuilding();
         List<PositionForBuilding> positionsWithOwners=currentPositionsForBuilding.getPositionsForBuildingWithOwners(players,positions);
@@ -109,7 +106,9 @@ public class Main {
                     }
                     if(!players.get(i).isBeingInJail()){
                     players.get(i).setTheNewPosition(players,i);
-                    //players.get(i).offerToSellProperty(i, players,positions);
+                   /* if(players.get(i).offerToSellProperty(i, players,positions)){
+
+                    };*/
                     positions.get(players.get(i).getCurrentPosition()-1).seeWhatThePositionOffersOrTakes(players,i,positions);
                     }
                     if(players.get(i).isHasBankrupted() && !players.get(i).isHasLostAllTheirProperty()){
@@ -124,7 +123,7 @@ public class Main {
             }
         }
         showTheWinner(players);
-    }//Main
+    }
     public static void showTheWinner(List<Player> players) throws IOException {
         for (int i = 0; i < playersCount; i++) {
             if (!players.get(i).isHasBankrupted()) {
@@ -134,7 +133,7 @@ public class Main {
         ReportInDocument reportInDocument=new ReportInDocument();
         reportInDocument.getTheGameResult(players);
 
-    }//Main
+    }
     public static void letsPickNicknames() {
         Scanner scan = new Scanner(System.in);
         for (int i = 0; i < playersCount; i++) {
@@ -142,5 +141,5 @@ public class Main {
             String newNickname=scan.nextLine();
             nicknames.add(newNickname);
         }
-    }//Main
+    }
 }

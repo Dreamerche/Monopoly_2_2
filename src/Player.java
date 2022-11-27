@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Player implements MoveOnBoardable {
+    protected static int cashShowingBadFinancialStatus=300;
     private String name;
     private double cash;
     private int currentPosition;
@@ -96,16 +97,45 @@ public class Player implements MoveOnBoardable {
     public boolean offerToSellProperty(int i,List<Player>players,List<Position>positions){
         CurrentPositionsForBuilding currentPositionsForBuilding=new CurrentPositionsForBuilding();
         List<PositionForBuilding> positionsWithOwners=currentPositionsForBuilding.getPositionsForBuildingWithOwners(players,positions);
-    List<PositionForBuilding> playersPositions=new ArrayList<>();
+        List<PositionForBuilding> playersPositions=new ArrayList<>();
         for (PositionForBuilding position:positionsWithOwners) {
             if(position.getOwner()==i){
                 playersPositions.add(position);
             }
         }
-        System.out.print("Your properties are on positions: ");
-        return true;
+        if(playersPositions.size()!=0 && getCash()<=cashShowingBadFinancialStatus){//has property and lacks in cash
+            return (askPlayerToSellProperty(new Scanner(System.in),i,positions,playersPositions));
+        }
+        return false;
     }
+    protected boolean askPlayerToSellProperty(Scanner scanner,int i,List<Position> positions, List<PositionForBuilding>playersPositions) {
+        while (true) {
+            PlayersProperty playersProperty=new PlayersProperty();
+            playersProperty.getPlayersPropertyInformation(i,playersPositions);
+            List<Integer> playersPropertyPositions = new ArrayList<>();
+            for (PositionForBuilding position : playersPositions) {
+                playersPropertyPositions.add(position.getNumberPosition());
+            }
 
+            System.out.print("Do you want to sell one of your properties?\n" +
+                    "If yes, type \"y\", type \"n\" otherwise:");
+            String option = scanner.nextLine();
+            if(option.equalsIgnoreCase("n"))
+            {
+                return false;
+            }
+            else if(option.equalsIgnoreCase("y")){
+                return true;
+            }
+        }
+        /*try {
+            //if (playersPropertyPositions.contains(option)) {
+                return true;
+            }
+        } catch (Exception e) {
+            System.out.println("Invalid input!");
+        }*/
+    }
     public String throwTheDices(Scanner scanner) {//test if you can
         System.out.print(getName() + ", throw the dices by typing \"t\": ");
         while (true) {
