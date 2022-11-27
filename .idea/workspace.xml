@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="file work done">
-      <change afterPath="$PROJECT_DIR$/Test/TestAskForPayingTheBankAndGetFree1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/TestBuyPosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/TestPayTheOwner.java" afterDir="false" />
+    <list default="true" id="e4081136-2a42-4e06-a3f6-e468a0f18c33" name="Changes" comment="YAY, found a way to check input in unit testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestAskForPayingTheBankAndGetFree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestBuildingOnPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestBuildingOnPosition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PositionForBuilding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionForBuilding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PositionsPuttingPlayerInPrison.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PositionsPuttingPlayerInPrison.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/TestAskForPayingTheBankAndGetFree1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestAskForPayingTheBankAndGetFree1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +73,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestAskForPayingTheBankAndGetFree1">
+  <component name="RunManager" selected="JUnit.All in Monopoly_2_2">
     <configuration name="All in Monopoly_2_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Monopoly_2_2" />
       <option name="PACKAGE_NAME" value="" />
@@ -127,9 +120,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in Monopoly_2_2" />
         <item itemvalue="JUnit.TestAskForPayingTheBankAndGetFree1" />
         <item itemvalue="JUnit.TestPayTheOwner" />
-        <item itemvalue="JUnit.All in Monopoly_2_2" />
         <item itemvalue="JUnit.TestBuyPosition" />
         <item itemvalue="JUnit.TestBuildingOnPosition" />
       </list>
@@ -368,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669498924710</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="YAY, found a way to check input in unit testing">
+      <created>1669528709279</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1669528709294</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -383,7 +383,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first branch~" />
     <MESSAGE value="classPositionForBulding" />
     <MESSAGE value="classPositionForBuilding-newConstructor,Getterts, Setters." />
     <MESSAGE value="classPositionCommunityChastCard" />
@@ -408,7 +407,8 @@
     <MESSAGE value="method for throwing dices should be fixed" />
     <MESSAGE value="working with file" />
     <MESSAGE value="file work done" />
-    <option name="LAST_COMMIT_MESSAGE" value="file work done" />
+    <MESSAGE value="YAY, found a way to check input in unit testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="YAY, found a way to check input in unit testing" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PositionCommunityChestCard_java$TestGetRandom.ic" NAME="TestGetRandom Coverage Results" MODIFIED="1669071302020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
