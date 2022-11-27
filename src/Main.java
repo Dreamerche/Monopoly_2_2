@@ -107,7 +107,6 @@ public class Main {
                     if(!players.get(i).isBeingInJail()){
                     players.get(i).setTheNewPosition(players,i);
                    /* if(players.get(i).offerToSellProperty(i, players,positions)){
-
                     };*/
                     positions.get(players.get(i).getCurrentPosition()-1).seeWhatThePositionOffersOrTakes(players,i,positions);
                     }
